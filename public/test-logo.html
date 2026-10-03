@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { background: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+  </style>
+</head>
+<body>
+  <div style="display: flex; gap: 40px; align-items: center;">
+    <div>
+      <p style="text-align: center; font-family: sans-serif; font-size: 12px; color: #888;">ORIGINAL PNG</p>
+      <img src="logo.png" style="width: 320px;" />
+    </div>
+    <div>
+      <p style="text-align: center; font-family: sans-serif; font-size: 12px; color: #888;">VECTOR SVG</p>
+      <svg viewBox="0 0 420 220" width="320" height="168">
+        <!-- Road / Pathways -->
+        <g id="road">
+          <!-- Dark Green Road base -->
+          <path d="M 110 102 L 180 94 L 140 128 L 300 128" fill="none" stroke="#3b4d24" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" />
+          <!-- Lime Green Road line -->
+          <path d="M 115 98 L 182 90 L 145 124 L 295 124" fill="none" stroke="#a2cf24" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" />
+        </g>
+        
+        <!-- Left Pin Shadow (Lime) -->
+        <ellipse cx="175" cy="89" rx="30" ry="7" fill="#a2cf24" />
+        
+        <!-- Left Pin (Dark Olive Green) -->
+        <g id="pin-1">
+          <path d="M 175 88 C 158 68, 149 55, 149 40 C 149 25.6, 160.6 14, 175 14 C 189.4 14, 201 25.6, 201 40 C 201 55, 192 68, 175 88 Z" fill="#3b4d24" />
+          <circle cx="175" cy="40" r="9" fill="#ffffff" />
+        </g>
+
+        <!-- Right Pin Shadow (Dark Olive Green) -->
+        <ellipse cx="255" cy="100" rx="40" ry="9" fill="#3b4d24" />
+
+        <!-- Right Pin (Lime Green) -->
+        <g id="pin-2">
+          <path d="M 255 99 C 235 74, 224 59, 224 40 C 224 22.8, 237.8 9, 255 9 C 272.2 9, 286 22.8, 286 40 C 286 59, 275 74, 255 99 Z" fill="#a2cf24" />
+          <circle cx="255" cy="40" r="12" fill="#ffffff" />
+        </g>
+
+        <!-- Typography -->
+        <text x="210" y="180" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-weight="900" font-size="44" letter-spacing="1">
+          <tspan fill="#3b4d24">VIZAG</tspan><tspan fill="#a2cf24">PLOTS</tspan>
+        </text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

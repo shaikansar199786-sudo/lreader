@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+:root {
+  --green-950: #0b241b;
+  --green-900: #123b2a;
+  --green-800: #174d35;
+  --green-700: #1f6843;
+  --green-500: #8dbb16;
+  --green-400: #a6d51d;
+  --ink: #172019;
+  --muted: #69736d;
+  --line: #dfe6df;
+  --soft: #f5f8f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--green-400);
+  color: var(--green-950);
+}
+
+.display-font {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.045em;
+}
+
+.blueprint {
+  background-image:
+    linear-gradient(rgba(20, 74, 49, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 74, 49, .035) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.blueprint::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .12;
+  background:
+    radial-gradient(circle at 15% 20%, transparent 0 90px, rgba(23,77,53,.2) 91px 92px, transparent 93px),
+    radial-gradient(circle at 82% 65%, transparent 0 120px, rgba(23,77,53,.15) 121px 122px, transparent 123px);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hero-image {
+  background-position: center center;
+  background-size: cover;
+}
+
+.cta-image {
+  background-image:
+    linear-gradient(90deg, rgba(4,35,26,.92), rgba(4,35,26,.64)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90");
+  background-position: center;
+  background-size: cover;
+}
+
+.image-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 640px) {
+  .hero-image {
+    background-position: 63% center;
+  }
+}
+
+@keyframes arrowFlow {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateX(5px);
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(163, 230, 53, 0.75));
+  }
+}
+
+.animate-arrow-flow {
+  animation: arrowFlow 1.6s ease-in-out infinite;
+}
+
+/* Preloader sequential logo animations */
+@keyframes pinDrop {
+  0% {
+    transform: translateY(-90px) scale(0.5);
+    opacity: 0;
+  }
+  65% {
+    transform: translateY(6px) scale(1.06);
+    opacity: 1;
+  }
+  82% {
+    transform: translateY(-3px) scale(0.98);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shadowExpand {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes drawRoad {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.92);
+    letter-spacing: -0.04em;
+  }
+  70% {
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 0.02em;
+  }
+}
+
+@keyframes radarWave {
+  0% {
+    r: 6;
+    opacity: 0.85;
+  }
+  100% {
+    r: 32;
+    opacity: 0;
+  }
+}
+
+.animate-pin-1 {
+  transform-origin: 175px 88px;
+  animation: pinDrop 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-shadow-1 {
+  transform-origin: 175px 89px;
+  animation: shadowExpand 0.5s ease-out forwards;
+}
+
+.animate-road {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: drawRoad 0.85s ease-in-out 0.5s forwards;
+}
+
+.animate-pin-2 {
+  transform-origin: 255px 99px;
+  opacity: 0;
+  animation: pinDrop 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s forwards;
+}
+
+.animate-shadow-2 {
+  transform-origin: 255px 100px;
+  opacity: 0;
+  animation: shadowExpand 0.5s ease-out 1.2s forwards;
+}
+
+.animate-radar-1 {
+  animation: radarWave 1.4s ease-out 0.6s infinite;
+}
+
+.animate-radar-2 {
+  animation: radarWave 1.4s ease-out 1.8s infinite;
+}
+
+.animate-logo-text {
+  opacity: 0;
+  animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
+}
+
+.animate-tagline {
+  opacity: 0;
+  animation: textReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+}
+
+/* Page Change Transition Animations (Fast & Visible Immediately) */
+@keyframes textRevealTransition {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pinDropQuick {
+  0% {
+    transform: translateY(-35px) scale(0.75);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(3px) scale(1.04);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pin-quick-1 {
+  transform-origin: 175px 88px;
+  animation: pinDropQuick 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-shadow-quick-1 {
+  transform-origin: 175px 89px;
+  animation: shadowExpand 0.3s ease-out forwards;
+}
+
+.animate-pin-quick-2 {
+  transform-origin: 255px 99px;
+  animation: pinDropQuick 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+}
+
+.animate-shadow-quick-2 {
+  transform-origin: 255px 100px;
+  animation: shadowExpand 0.3s ease-out 0.1s forwards;
+}
+
+.animate-road-quick {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 0;
+  animation: drawRoad 0.45s ease-in-out forwards;
+}
+
+.animate-logo-text-transition {
+  animation: textRevealTransition 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.animate-tagline-transition {
+  animation: textRevealTransition 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* Rubber Stamp Entrance & Float Animation */
+@keyframes stampIn {
+  0% {
+    opacity: 0;
+    transform: scale(2.4) rotate(-26deg);
+    filter: blur(4px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(0.96) rotate(-6deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-8deg);
+    filter: blur(0);
+  }
+}
+
+.animate-stamp-in {
+  animation: stampIn 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
