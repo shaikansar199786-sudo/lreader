@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --green-950: #0b241b;
-  --green-900: #123b2a;
-  --green-800: #174d35;
-  --green-700: #1f6843;
+  --green-950: #071f16;
+  --green-900: #0b291d;
+  --green-800: #123e2c;
+  --green-700: #18533b;
+  --green-600: #1f6843;
   --green-500: #8dbb16;
   --green-400: #a6d51d;
-  --ink: #172019;
-  --muted: #69736d;
-  --line: #dfe6df;
-  --soft: #f5f8f5;
+  --lime-bright: #b8ea1c;
+  --gold-accent: #d4af37;
+  --gold-light: #f5e6a3;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --soft: #f8faf9;
 }
 
 * {
@@ -25,7 +30,9 @@ body {
   margin: 0;
   background: #fff;
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button,
@@ -34,13 +41,18 @@ a {
 }
 
 ::selection {
-  background: var(--green-400);
+  background: var(--lime-bright);
   color: var(--green-950);
 }
 
-.display-font {
-  font-family: Georgia, "Times New Roman", serif;
-  letter-spacing: -0.045em;
+.display-font,
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.025em;
+}
+
+.font-accent {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
 }
 
 .blueprint {
