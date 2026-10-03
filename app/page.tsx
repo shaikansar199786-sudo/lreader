@@ -732,7 +732,7 @@ export default function HomePage() {
                 />
               </div>
             )}
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-slate-950/60" />
+            <div className="absolute inset-0 bg-slate-950/80" />
           </div>
         ))}
 
@@ -779,7 +779,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
                   href="#ventures"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-lime-400 via-emerald-400 to-lime-300 px-7 py-3.5 text-xs sm:text-sm font-black text-slate-950 shadow-[0_6px_25px_rgba(163,230,53,0.4)] transition-all hover:scale-105 active:scale-95"
+                  className="inline-flex items-center gap-2 rounded-full bg-lime-400 hover:bg-lime-300 px-7 py-3.5 text-xs sm:text-sm font-black text-slate-950 shadow-[0_6px_25px_rgba(163,230,53,0.35)] transition-all hover:scale-105 active:scale-95"
                 >
                   <span>Explore Plotted Ventures</span>
                   <ArrowRight size={16} />
@@ -906,7 +906,7 @@ export default function HomePage() {
                     <button
                       type="submit"
                       disabled={isSubmittingLead}
-                      className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-lime-400 via-emerald-400 to-lime-300 py-3 text-xs font-black uppercase tracking-wider text-slate-950 shadow-[0_4px_20px_rgba(163,230,53,0.4)] transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
+                      className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-lime-400 hover:bg-lime-300 py-3 text-xs font-black uppercase tracking-wider text-slate-950 shadow-[0_4px_20px_rgba(163,230,53,0.35)] transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
                     >
                       <WhatsAppIcon className="h-4 w-4 fill-slate-950" />
                       <span>Book Free Cab on WhatsApp</span>
