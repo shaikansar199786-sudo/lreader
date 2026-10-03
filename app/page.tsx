@@ -1,20 +1,24 @@
- "use client";
+"use client";
 
 import {
-  ArrowDownRight,
   ArrowRight,
   Award,
+  BadgeCheck,
   Building2,
+  Calendar,
   Check,
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
   CircleCheck,
   Compass,
-  Construction,
   CreditCard,
+  Download,
+  FileCheck2,
   FileText,
-  HardHat,
+  Globe2,
   Headphones,
+  HelpCircle,
   Home,
   IndianRupee,
   KeyRound,
@@ -23,8 +27,8 @@ import {
   MapPin,
   Menu,
   MessageCircle,
+  Navigation,
   Pause,
-  PencilRuler,
   Phone,
   Play,
   Quote,
@@ -33,6 +37,7 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
+  Trees,
   Users,
   Video,
   Volume2,
@@ -63,15 +68,9 @@ function OfficialStampBadge({ className = "" }: { className?: string }) {
     <div
       className={`animate-stamp-in group relative flex items-center justify-center select-none ${className}`}
     >
-      {/* Outer subtle glow */}
       <div className="absolute inset-0 rounded-full bg-lime-400/25 blur-md animate-pulse" />
-
-      {/* Main Stamp Container with rubber-stamp angled aesthetic */}
       <div className="relative flex h-[106px] w-[106px] sm:h-[122px] sm:w-[122px] items-center justify-center rounded-full border-2 border-dashed border-lime-400 bg-slate-950/85 p-1 shadow-[0_0_22px_rgba(163,230,53,0.45)] backdrop-blur-md">
-        {/* Inner double border ring */}
         <div className="absolute inset-1 rounded-full border border-lime-400/40" />
-
-        {/* Rotating Circular Text Ring */}
         <svg
           viewBox="0 0 120 120"
           className="absolute inset-0 h-full w-full animate-[spin_18s_linear_infinite]"
@@ -87,8 +86,6 @@ function OfficialStampBadge({ className = "" }: { className?: string }) {
             </textPath>
           </text>
         </svg>
-
-        {/* Center Emblem with Official Shield & 20+ Years */}
         <div className="relative flex flex-col items-center justify-center text-center">
           <div className="flex h-5 w-5 sm:h-6 sm:w-6 items-center justify-center rounded-full bg-lime-400 text-slate-950 shadow-sm">
             <ShieldCheck size={14} className="stroke-[2.5]" />
@@ -127,208 +124,6 @@ const heroSlides = [
   },
 ];
 
-const plots = [
-  {
-    title: "Sukrithi Aawas",
-    slug: "sukrithi-aawas",
-    location: "Visakhapatnam, Andhra Pradesh",
-    size: "3 Cent / Layout Plots",
-    tags: ["Clear Title", "Immediate Registration", "Avenue Plantation"],
-    image: "/subhagruha/sukrithi-aawas.jpg",
-    badge: "Ready to Register",
-  },
-  {
-    title: "Sukruthi Ananthika",
-    slug: "sukruthi-ananthika",
-    location: "Srikakulam Highway, Visakhapatnam",
-    size: "12,000 Sq.Ft Layout",
-    tags: ["Highway Facing", "Gated Community", "Children Play Area"],
-    image: "/subhagruha/sukruthi-ananthika.jpg",
-    badge: "Upcoming Venture",
-  },
-  {
-    title: "Sukrithi Windsor",
-    slug: "sukrithi-windsor",
-    location: "Bheemannadorapalem, Vizag",
-    size: "Premium Residential Plots",
-    tags: ["VMRDA Approved", "Fast Appreciation", "Clear Legal Title"],
-    image: "/subhagruha/sukrithi-windsor.jpg",
-    badge: "For Sale",
-  },
-  {
-    title: "Sukrithi Sathvik",
-    slug: "sukrithi-sathvik",
-    location: "Gantlam, Vizianagaram Highway",
-    size: "1,200 Sq. Ft Plots",
-    tags: ["Gated Security", "Overhead Water Tank", "Avenue Trees"],
-    image: "/subhagruha/sukrithi-sathvik.png",
-    badge: "For Sale",
-  },
-];
-
-const upcomingVentures = [
-  {
-    name: "Sukruthi Ananthika",
-    slug: "sukruthi-ananthika",
-    location: "Srikakulam highway, Visakhapatnam",
-    size: "12,000 Sq.Ft",
-    facing: "West Facing",
-    highlights: ["Highway Facing", "Gated Community", "Children Play Area"],
-    image: "/subhagruha/sukruthi-ananthika.jpg",
-  },
-  {
-    name: "Maple Meadows",
-    slug: "maple-meadows",
-    location: "Modavalasa village, Bangar Raju Peta, Visakhapatnam",
-    size: "3,200 Sq. Ft",
-    facing: "South Facing",
-    highlights: ["Grand Arch Entrance", "Tree-Lined Roads", "Green Parks"],
-    image: "/subhagruha/gallery-maple.png",
-  },
-  {
-    name: "Sukrithi Aawas",
-    slug: "sukrithi-aawas",
-    location: "Visakhapatnam, Andhra Pradesh",
-    size: "3 Cent / Layout Plots",
-    facing: "North Facing",
-    highlights: ["Clear Title", "Immediate Registration", "Avenue Plantation"],
-    image: "/subhagruha/sukrithi-aawas.jpg",
-  },
-];
-
-const recentProjects = [
-  {
-    name: "Sukrithi Windsor",
-    slug: "sukrithi-windsor",
-    location: "Bheemannadorapalem, Vizag",
-    size: "Premium Plots",
-    facing: "East Facing",
-    type: "Residential Plot",
-    status: "Sale",
-    image: "/subhagruha/sukrithi-windsor.jpg",
-  },
-  {
-    name: "Sukrithi Aawas",
-    slug: "sukrithi-aawas",
-    location: "Visakhapatnam, Andhra Pradesh",
-    size: "3 Cent / Plots",
-    facing: "North Facing",
-    type: "Residential Plot",
-    status: "Sale",
-    image: "/subhagruha/sukrithi-aawas.jpg",
-  },
-  {
-    name: "Sukeerthi Sadan Phase 2",
-    slug: "sukeerthi-sadan-phase-2",
-    location: "Kothavalasa, Vizag",
-    size: "12,345 Sq.Ft",
-    facing: "East Facing",
-    type: "Residential Plot",
-    status: "Sale",
-    image: "/subhagruha/sukeerthi-sadan-phase-2.jpeg",
-  },
-  {
-    name: "Sukeerthi Sadan Phase 1",
-    slug: "sukeerthi-sadan-phase-1",
-    location: "Kothavalasa, Vizag",
-    size: "23,456 Sq.Ft",
-    facing: "South Facing",
-    type: "Residential Plot",
-    status: "Sale",
-    image: "/subhagruha/sukeerthi-sadan-phase-1.png",
-  },
-  {
-    name: "Sukrithi Springs",
-    slug: "sukrithi-springs",
-    location: "Visakhapatnam, Andhra Pradesh",
-    size: "200 Sq.Yards",
-    facing: "East Facing",
-    type: "Residential Plot",
-    status: "Sale",
-    image: "/subhagruha/sukrithi-springs.jpg",
-  },
-  {
-    name: "Maple Meadows",
-    slug: "maple-meadows",
-    location: "Modavalasa village, Vizag",
-    size: "3,200 Sq. Ft",
-    facing: "South Facing",
-    type: "Residential Plot",
-    status: "Sale",
-    image: "/subhagruha/maple-meadows.png",
-  },
-  {
-    name: "Sukruthi Ananthika",
-    slug: "sukruthi-ananthika",
-    location: "Visakhapatnam, Andhra Pradesh",
-    size: "12,000 Sq.Ft",
-    facing: "West Facing",
-    type: "Residential Plot",
-    status: "Sale",
-    image: "/subhagruha/sukruthi-ananthika.jpg",
-  },
-  {
-    name: "Subhagruha Sukrithi Saanvi Phase-3",
-    slug: "subhagruha-sukrithi-saanvi-phase-3",
-    location: "Tagarapuvalasa, Vizag",
-    size: "2,000 Sq. Ft",
-    facing: "North Facing",
-    type: "Residential Plot",
-    status: "Sale",
-    image: "/subhagruha/gallery-saanvi.png",
-  },
-  {
-    name: "Sukrithi Sathvik",
-    slug: "sukrithi-sathvik",
-    location: "Gantlam, Vizianagaram",
-    size: "1,200 Sq.ft",
-    facing: "South Facing",
-    type: "Residential Plot",
-    status: "Sale",
-    image: "/subhagruha/sukrithi-sathvik.png",
-  },
-];
-
-
-const processSteps = [
-  {
-    num: "1",
-    title: "1. Plot Selection",
-    desc: "Find the perfect location",
-    icon: LandPlot,
-  },
-  {
-    num: "2",
-    title: "2. Planning",
-    desc: "Feasibility & approvals",
-    icon: FileText,
-  },
-  {
-    num: "3",
-    title: "3. Design",
-    desc: "Build your vision",
-    icon: PencilRuler,
-  },
-  {
-    num: "4",
-    title: "4. Construction",
-    desc: "Quality materials & skilled team",
-    icon: HardHat,
-  },
-  {
-    num: "5",
-    title: "5. Quality Check",
-    desc: "Safety & standards",
-    icon: ShieldCheck,
-  },
-  {
-    num: "6",
-    title: "6. Handover",
-    desc: "Your dream home is ready",
-    icon: KeyRound,
-  },
-];
-
 const companyStats = [
   {
     num: "20",
@@ -339,100 +134,345 @@ const companyStats = [
   {
     num: "158",
     suffix: "M+",
-    label: "Million Sq. Ft. Development",
+    label: "Million Sq. Ft. Delivered",
     icon: Building2,
   },
   {
     num: "12",
     suffix: "K+",
-    label: "Happy Families & Homes",
+    label: "Happy Families & Investors",
     icon: Users,
   },
   {
     num: "100",
     suffix: "+",
-    label: "Landmarks Nearby",
+    label: "Approved Plotted Ventures",
     icon: MapPin,
   },
 ];
 
-const whyChooseItems = [
+// Subhagruha's 6 True Real Estate Plotted Services
+const realEstateServices = [
+  {
+    title: "VMRDA & RERA Approved Layouts",
+    desc: "100% legally scrutinized residential plots with clear titles, sanctioned LP numbers, and immediate spot registration at Sub-Registrar offices.",
+    icon: ShieldCheck,
+    tag: "Legally Verified",
+  },
+  {
+    title: "Complimentary Cab Site Visit",
+    desc: "Free doorstep pickup & drop in comfortable AC cabs for your entire family to inspect prime ventures across Visakhapatnam growth corridors.",
+    icon: Navigation,
+    tag: "Free Family Cab",
+  },
+  {
+    title: "30-Year Legal Title Scrutiny",
+    desc: "Complete documentation transparency with 30-year link deeds, Encumbrance Certificates (EC), and legal scrutiny reports available before commitment.",
+    icon: FileCheck2,
+    tag: "100% Clear Title",
+  },
+  {
+    title: "Pre-Approved Bank Loans (Up to 75%)",
+    desc: "Tied up with leading financial institutions including SBI, HDFC Bank, Axis Bank, and LIC Housing Finance for rapid plot loan approvals.",
+    icon: CreditCard,
+    tag: "SBI & HDFC Pre-Approved",
+  },
+  {
+    title: "Gated Township Infrastructure",
+    desc: "33ft, 40ft & 60ft wide BT blacktop roads, underground drainage, avenue plantations, overhead water storage, and 24/7 security with grand entrance arches.",
+    icon: Trees,
+    tag: "World-Class Living",
+  },
+  {
+    title: "Dedicated NRI Property Desk",
+    desc: "Tailored assistance for Non-Resident Indians including FEMA compliance, Power of Attorney (PoA) guidance, virtual video tours, and resale advisory.",
+    icon: Globe2,
+    tag: "Global Support",
+  },
+];
+
+// Corridor-Categorized Projects
+const allVentures = [
+  {
+    name: "Sukrithi Saanvi Phase 4",
+    slug: "sukrithi-saanvi-phase-4",
+    corridor: "Bhogapuram",
+    corridorLabel: "Bhogapuram Airport Corridor",
+    location: "Near Green Field International Airport, Bhogapuram",
+    approval: "VUDA & VMRDA Approved",
+    lpNo: "LP Available on Request",
+    size: "167 - 500 Sq. Yds",
+    facing: "East & North Facing Plots",
+    priceNote: "High Appreciation Zone",
+    status: "Active Sale",
+    image: "/subhagruha/proj-sukrithi-saanvi4.jpg",
+    tags: ["Airport Facing", "Gated Security", "Overhead Tank", "Avenue Plantation"],
+  },
+  {
+    name: "Sukrithi Lohitha",
+    slug: "sukrithi-lohitha",
+    corridor: "Anandapuram",
+    corridorLabel: "Anandapuram Highway Hub",
+    location: "Anandapuram Junction, Visakhapatnam",
+    approval: "VMRDA Approved",
+    lpNo: "Sanctioned VMRDA Layout",
+    size: "150 - 400 Sq. Yds",
+    facing: "East, West & Corner Plots",
+    priceNote: "Ready to Register",
+    status: "Active Sale",
+    image: "/subhagruha/proj-sukrithi-lohitha.jpg",
+    tags: ["Highway Connectivity", "Underground Drainage", "Blacktop Roads", "Park Zone"],
+  },
+  {
+    name: "Sukrithi Windsor",
+    slug: "sukrithi-windsor",
+    corridor: "Anandapuram",
+    corridorLabel: "Anandapuram Growth Corridor",
+    location: "Bheemannadorapalem, Anandapuram Mandal, Vizag",
+    approval: "VMRDA Approved",
+    lpNo: "Clear Title Layout",
+    size: "150 - 450 Sq. Yds",
+    facing: "North & East Facing",
+    priceNote: "Bank Loan Eligible",
+    status: "For Sale",
+    image: "/subhagruha/sukrithi-windsor.jpg",
+    tags: ["Compound Wall", "Street Lighting", "24/7 Guard", "100% Vaastu"],
+  },
+  {
+    name: "Maple Meadows",
+    slug: "maple-meadows",
+    corridor: "Modavalasa",
+    corridorLabel: "Modavalasa & Sontyam",
+    location: "Modavalasa Village, Near Sontyam Corridor, Vizag",
+    approval: "VMRDA Approved",
+    lpNo: "Sanctioned Layout",
+    size: "200 - 600 Sq. Yds",
+    facing: "South & East Facing",
+    priceNote: "Fast Growing Hub",
+    status: "For Sale",
+    image: "/subhagruha/maple-meadows.png",
+    tags: ["Grand Arch", "Tree-Lined Roads", "Green Children Park", "Water Tap Connection"],
+  },
+  {
+    name: "Subhagruha Sukrithi Saanvi Phase-3",
+    slug: "subhagruha-sukrithi-saanvi-phase-3",
+    corridor: "Tagarapuvalasa",
+    corridorLabel: "Tagarapuvalasa Coastal Corridor",
+    location: "Tagarapuvalasa Highway Arterial, Visakhapatnam",
+    approval: "VMRDA Approved",
+    lpNo: "VMRDA Sanctioned",
+    size: "167 - 350 Sq. Yds",
+    facing: "North & East Facing",
+    priceNote: "Ready for Construction",
+    status: "Active Sale",
+    image: "/subhagruha/gallery-saanvi.png",
+    tags: ["Near Educational Hubs", "33ft BT Roads", "Electricity Lines", "Immediate Spot Reg"],
+  },
+  {
+    name: "Sukriti Sampath",
+    slug: "sukriti-sampath",
+    corridor: "Modavalasa",
+    corridorLabel: "Sontyam Corridor",
+    location: "Sontyam, Visakhapatnam",
+    approval: "Clear Title Layout",
+    lpNo: "Clear Legal Scrutiny",
+    size: "150 - 400 Sq. Yds",
+    facing: "East & North Facing",
+    priceNote: "Affordable Land Investment",
+    status: "Active Sale",
+    image: "/subhagruha/proj-sukrithi-sampath.jpg",
+    tags: ["Sontyam Hub", "Immediate Registration", "Avenue Trees", "Bank Loan Assistance"],
+  },
+  {
+    name: "Sukrithi Nivas Phase 3",
+    slug: "sukrithi-nivas-phase-3",
+    corridor: "Tagarapuvalasa",
+    corridorLabel: "Tagarapuvalasa Expansion",
+    location: "Tagarapuvalasa - Bheemili Corridor, Vizag",
+    approval: "VMRDA Approved",
+    lpNo: "Approved Layout",
+    size: "167 - 450 Sq. Yds",
+    facing: "East & West Facing",
+    priceNote: "High ROI Potential",
+    status: "Active Sale",
+    image: "/subhagruha/proj-sukrithi-nivas.jpg",
+    tags: ["Bheemili Connectivity", "Clear Title Deeds", "Parks & Play Area", "Wide Roads"],
+  },
+  {
+    name: "Sukruthi Ananthika",
+    slug: "sukruthi-ananthika",
+    corridor: "Anandapuram",
+    corridorLabel: "Highway Growth Corridor",
+    location: "Srikakulam - Vizag National Highway, Visakhapatnam",
+    approval: "VMRDA Approved",
+    lpNo: "VMRDA Sanctioned",
+    size: "12,000 Sq.Ft Layout Plots",
+    facing: "West & North Facing",
+    priceNote: "Highway Facing Premium",
+    status: "Upcoming Venture",
+    image: "/subhagruha/sukruthi-ananthika.jpg",
+    tags: ["Direct NH-16 Frontage", "Near Oakridge Corridor", "Gated Township", "Lush Parks"],
+  },
+  {
+    name: "Sukrithi Sathvik",
+    slug: "sukrithi-sathvik",
+    corridor: "Modavalasa",
+    corridorLabel: "Vizianagaram Highway",
+    location: "Gantlam, Vizianagaram Highway, Vizag Region",
+    approval: "Clear Title Layout",
+    lpNo: "Clear Title",
+    size: "133 - 300 Sq. Yds",
+    facing: "South & East Facing",
+    priceNote: "Budget Friendly",
+    status: "For Sale",
+    image: "/subhagruha/sukrithi-sathvik.png",
+    tags: ["Gated Security", "Overhead Water Tank", "Avenue Trees", "Bank Loan Support"],
+  },
+];
+
+// The Real Estate Customer Journey (replacing construction steps)
+const processSteps = [
   {
     num: "01",
-    title: "20+ Years of Experience",
-    desc: "Years of trusted presence in Visakhapatnam, backed by consistent development and timely project delivery.",
-    icon: Award,
+    title: "Free Cab Site Visit",
+    desc: "Complimentary AC doorstep pickup for your family to inspect ventures firsthand.",
+    icon: Navigation,
   },
   {
     num: "02",
-    title: "RERA & VMRDA Compliant",
-    desc: "Well-planned layouts backed by relevant approvals and verified property titles, wherever documented.",
-    icon: ShieldCheck,
+    title: "Plot & Facing Selection",
+    desc: "Choose East/North facing plots, corner units, and preferred sizes (167 - 500 Sq. Yds).",
+    icon: Compass,
   },
   {
     num: "03",
-    title: "Prime, Growing Locations",
-    desc: "Strategically located across Vizag’s key growth corridors — Tagarapuvalasa, Anandapuram, Sontyam and beyond.",
-    icon: MapPin,
+    title: "Legal & Title Verification",
+    desc: "Review VMRDA LP approvals, 30-year link documents, and RERA registration with 100% transparency.",
+    icon: FileCheck2,
   },
   {
     num: "04",
-    title: "Transparent Dealings",
-    desc: "Clear pricing, transparent documentation and open communication from enquiry to registration.",
-    icon: CircleCheck,
-  },
-  {
-    num: "05",
-    title: "Flexible Payment Plans",
-    desc: "Flexible installment plans designed to make land investment easier and more accessible.",
+    title: "Bank Loan Assistance",
+    desc: "Pre-approved loans up to 75% arranged with SBI, HDFC, Axis Bank & LIC Housing Finance.",
     icon: CreditCard,
   },
   {
-    num: "06",
-    title: "End-to-End Support",
-    desc: "Complete support with legal documentation, loan paperwork and registration for local, NRI and out-of-state buyers.",
-    icon: Headphones,
+    num: "05",
+    title: "Spot Registration",
+    desc: "Execute the registered sale deed at the Sub-Registrar office with instant patta handover.",
+    icon: KeyRound,
   },
 ];
 
+// Pre-Approved Banking Partners
+const bankingPartners = [
+  { name: "State Bank of India", badge: "SBI Home & Plot Loan", rate: "Pre-Approved" },
+  { name: "HDFC Bank", badge: "HDFC Home Loans", rate: "Up to 75% Funding" },
+  { name: "Axis Bank", badge: "Axis Bank Home Loan", rate: "Fast Sanction" },
+  { name: "Tata Capital", badge: "Tata Housing Finance", rate: "Low Interest" },
+  { name: "ICICI Bank", badge: "ICICI Home Loans", rate: "Minimal Paperwork" },
+];
+
+// Customer Testimonials from subhagruha.net
 const testimonials = [
   {
-    name: "Santosh",
-    role: "Led Business",
-    review: "Subhagruha group is the best place to invest in real estate. I had bought a plot in Sukrithi Avanthika venture.",
+    name: "Keshav Atal",
+    role: "Plot Owner",
     venture: "Sukrithi Avanthika",
     rating: 5,
-    initials: "S",
+    review:
+      "Subhagruha Plots offers exceptional care and responsible service. My family is extremely satisfied with the respect they provide to customers — truly among the best real estate teams in Vizag.",
   },
   {
-    name: "Abhishek",
-    role: "Business man",
-    review: "They have got all of the approvals for the venture which I bought a plot venture near to Vizianagaram.",
-    venture: "Vizianagaram Venture",
+    name: "Samantra Smruti",
+    role: "Investor",
+    venture: "Bhogapuram Airport Corridor",
     rating: 5,
-    initials: "A",
+    review:
+      "Investing in Subhagruha plots was one of my best decisions. With excellent development, highway connectivity, and VMRDA-approved layouts, the team guided me smoothly at every step.",
   },
   {
-    name: "Vimala",
-    role: "Software Engineer",
-    review: "Best Best Company in the City. Excellent Layout, Excellent Venture Developments, Excellent Location.",
-    venture: "Visakhapatnam Corridor",
+    name: "Eswar Abhinav",
+    role: "Plot Owner",
+    venture: "Sukrithi Windsor",
     rating: 5,
-    initials: "V",
+    review:
+      "I recently bought a 150 sq. yard plot from Subhagruha and had a seamless experience. Their loan support and transparent documentation make them the most trusted choice in Visakhapatnam.",
   },
+  {
+    name: "Shaik Mahaboob Roshan",
+    role: "Homeowner",
+    venture: "Anandapuram Corridor",
+    rating: 5,
+    review:
+      "Subhagruha's projects in Vizag offer peaceful, secure living with well-planned gated communities, wide blacktop roads, and quick connectivity to top schools, hospitals, and highways.",
+  },
+  {
+    name: "Mahidhar Ponnada",
+    role: "Investor",
+    venture: "Sukrithi Sathvik",
+    rating: 5,
+    review:
+      "We invested in two Subhagruha plots and are extremely satisfied. The venture is fully developed near the highway, offering excellent infrastructure and huge future appreciation.",
+  },
+];
+
+// Comprehensive Real Estate FAQ
+const faqs = [
+  {
+    q: "Are Subhagruha ventures approved by VMRDA & VUDA?",
+    a: "Yes. All Subhagruha residential plotted townships across Visakhapatnam are developed in accordance with the regulatory standards of the Visakhapatnam Metropolitan Region Development Authority (VMRDA / VUDA) with clear titles, sanctioned LP drawings, and complete documentation.",
+  },
+  {
+    q: "Are the plots eligible for bank loans?",
+    a: "Yes, our ventures are pre-approved by leading financial institutions including State Bank of India (SBI), HDFC Bank, Axis Bank, Tata Capital, and LIC Housing Finance. Buyers can finance up to 70% to 75% of the plot cost with low interest rates.",
+  },
+  {
+    q: "How does the complimentary cab site visit work?",
+    a: "We provide free doorstep pickup and drop in air-conditioned vehicles for you and your family. Our expert property advisors will guide you through the chosen ventures, show master layout plans, and clarify plot demarcations.",
+  },
+  {
+    q: "Can NRIs and out-of-state buyers purchase Subhagruha plots?",
+    a: "Absolutely. NRIs and non-local buyers regularly invest in our Visakhapatnam growth corridors. We provide end-to-end remote assistance, including Power of Attorney (PoA) guidance, digital video walkthroughs, and legal title scrutinies.",
+  },
+  {
+    q: "What infrastructure amenities are included in each layout?",
+    a: "Every Subhagruha layout features wide 33ft, 40ft, or 60ft blacktop internal roads, underground drainage, overhead water storage, underground electricity cabling & streetlights, avenue plantations, and dedicated children play parks secured by boundary walls.",
+  },
+  {
+    q: "When can spot registration be completed?",
+    a: "Registration can be completed immediately at the local Sub-Registrar office once documentation and payment milestones are finalized. We handle all registration paperwork to ensure instant handover of your registered sale deed.",
+  },
+];
+
+const mainNavLinks = [
+  { label: "Home", href: "/", active: true },
+  { label: "About Us", href: "/about-us" },
+  { label: "Projects", href: "/projects" },
+  { label: "Blogs", href: "/blog" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const [selectedCorridor, setSelectedCorridor] = useState<string>("All");
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  // Hero Quick Enquiry State
+  const [leadName, setLeadName] = useState("");
+  const [leadPhone, setLeadPhone] = useState("");
+  const [leadProject, setLeadProject] = useState("Sukrithi Saanvi (Bhogapuram Airport)");
+  const [leadDay, setLeadDay] = useState("This Weekend (Free Cab)");
+  const [isSubmittingLead, setIsSubmittingLead] = useState(false);
+  const [leadSuccess, setLeadSuccess] = useState(false);
 
   const heroVideoRef = useRef<HTMLVideoElement>(null);
   const [isVideoMuted, setIsVideoMuted] = useState(true);
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
 
-  // Auto-play slider: 6s for images, 14s for video (full 0:36-0:50 clip)
+  // Auto-play slider: 6s for images, 14s for video
   useEffect(() => {
     const delay = currentSlide === 2 ? 14000 : 6000;
     const timer = setTimeout(() => {
@@ -441,7 +481,6 @@ export default function HomePage() {
     return () => clearTimeout(timer);
   }, [currentSlide]);
 
-  // Ensure local video plays from start whenever slide 2 becomes active
   useEffect(() => {
     if (currentSlide === 2 && heroVideoRef.current) {
       heroVideoRef.current.currentTime = 0;
@@ -450,152 +489,163 @@ export default function HomePage() {
     }
   }, [currentSlide]);
 
-  const toggleVideoMute = () => {
-    if (heroVideoRef.current) {
-      heroVideoRef.current.muted = !heroVideoRef.current.muted;
-      setIsVideoMuted(heroVideoRef.current.muted);
-    }
-  };
-
   const toggleVideoPlayback = () => {
-    if (heroVideoRef.current) {
-      if (heroVideoRef.current.paused) {
-        heroVideoRef.current.play();
-        setIsVideoPlaying(true);
-      } else {
-        heroVideoRef.current.pause();
-        setIsVideoPlaying(false);
-      }
+    if (!heroVideoRef.current) return;
+    if (heroVideoRef.current.paused) {
+      heroVideoRef.current.play();
+      setIsVideoPlaying(true);
+    } else {
+      heroVideoRef.current.pause();
+      setIsVideoPlaying(false);
     }
   };
 
-  const mainNavLinks = [
-    { label: "Home", href: "/", active: true },
-    { label: "About", href: "/about-us", active: false },
-    { label: "Projects", href: "/projects", active: false },
-    { label: "Blog", href: "/blog", active: false },
-    { label: "Contact", href: "/contact", active: false },
-  ];
+  const toggleVideoMute = () => {
+    if (!heroVideoRef.current) return;
+    heroVideoRef.current.muted = !heroVideoRef.current.muted;
+    setIsVideoMuted(heroVideoRef.current.muted);
+  };
+
+  const handleHeroLeadSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!leadPhone.trim()) return;
+
+    setIsSubmittingLead(true);
+    const msg = `*Free Site Visit Request - VizagPlots / Subhagruha*%0A%0A*Name:* ${encodeURIComponent(
+      leadName || "Interested Buyer"
+    )}%0A*Phone:* ${encodeURIComponent(leadPhone)}%0A*Interested Venture:* ${encodeURIComponent(
+      leadProject
+    )}%0A*Preferred Timing:* ${encodeURIComponent(
+      leadDay
+    )}%0A%0APlease arrange a complimentary AC cab pickup and share layout brochure.`;
+
+    const waUrl = `https://wa.me/919052867067?text=${msg}`;
+    window.open(waUrl, "_blank");
+    setIsSubmittingLead(false);
+    setLeadSuccess(true);
+  };
+
+  // Filter projects by Corridor
+  const filteredVentures =
+    selectedCorridor === "All"
+      ? allVentures
+      : allVentures.filter((v) => v.corridor === selectedCorridor);
 
   return (
-    <main className="overflow-hidden">
-      {/* Enquiry Now / Request a Quote Modal Popup */}
-      <EnquiryModal
-        isOpen={isQuoteModalOpen}
-        onClose={() => setIsQuoteModalOpen(false)}
-      />
+    <main className="min-h-screen bg-white text-slate-900 antialiased selection:bg-lime-400 selection:text-slate-950">
+      {/* Top Banner Ribbon */}
+      <div className="bg-[#0b241b] px-4 py-2 text-center text-xs font-semibold text-white/90 border-b border-lime-400/20">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="flex h-2 w-2 rounded-full bg-lime-400 animate-ping" />
+            <span className="text-lime-300 font-bold uppercase tracking-wider text-[11px]">
+              VMRDA &amp; VUDA Approved Townships
+            </span>
+            <span className="hidden md:inline text-white/60">· Over 20 Years of On-Time Development</span>
+          </div>
+          <div className="flex items-center gap-4 text-xs font-bold">
+            <a
+              href="tel:+919052867067"
+              className="flex items-center gap-1.5 hover:text-lime-300 transition-colors"
+            >
+              <Phone size={13} className="text-lime-400" />
+              <span>(+91) 9052867067</span>
+            </a>
+            <span className="hidden sm:inline text-white/30">|</span>
+            <a
+              href="https://wa.me/919052867067?text=Hi%2C%20I%20am%20interested%20in%20learning%20more%20about%20Subhagruha%20ventures."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-1 text-lime-300 hover:text-lime-200"
+            >
+              <WhatsAppIcon className="h-3.5 w-3.5 fill-lime-400" />
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex h-[74px] max-w-[1400px] items-center justify-between px-5 lg:px-10">
-          <a href="#home" className="flex items-center">
-            <Image src="/logo.png" alt="VizagPlots" width={145} height={78} className="h-[58px] w-auto object-contain" priority />
-          </a>
+      {/* Main Navigation Header */}
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md shadow-xs">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative h-11 w-44 sm:h-12 sm:w-48">
+              <Image
+                src="/logo.png"
+                alt="VizagPlots - Subhagruha Group Channel Partner"
+                fill
+                priority
+                className="object-contain"
+              />
+            </div>
+          </Link>
 
-          {/* Main Navigation (ONLY Home, About, Projects, Blog, Contact) */}
-          <nav className="hidden items-center gap-7 2xl:gap-9 xl:flex h-[74px]">
-            {mainNavLinks.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className={`relative flex h-full items-center px-1 text-[15px] lg:text-[16px] tracking-wide transition-colors ${
-                  item.active
-                    ? "font-extrabold text-[var(--green-950)]"
-                    : "font-semibold text-slate-700 hover:text-[var(--green-800)]"
+          <nav className="hidden items-center gap-7 lg:flex">
+            {mainNavLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={`text-sm font-bold tracking-tight transition-colors hover:text-[#174d35] ${
+                  link.active ? "text-[#174d35] border-b-2 border-lime-500 pb-1" : "text-slate-700"
                 }`}
               >
-                <span>{item.label}</span>
-                {item.active && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[3.5px] rounded-t-full bg-[#8dbb16] shadow-sm" />
-                )}
-              </a>
+                {link.label}
+              </Link>
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3.5 xl:flex">
-            <a
-              href="tel:+919052867067"
-              className="flex items-center gap-1.5 text-xs font-bold text-slate-700 transition hover:text-[var(--green-800)]"
-            >
-              <Phone size={14} className="text-[var(--green-700)]" />
-              <span>(+91) 9052867067</span>
-            </a>
-
-            {/* Search / Enquiry Icon Button */}
+          <div className="flex items-center gap-3">
             <button
-              type="button"
               onClick={() => setIsQuoteModalOpen(true)}
-              aria-label="Search & Request a Quote"
-              className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-2 text-xs font-medium text-slate-600 transition hover:border-[var(--green-700)] hover:bg-white hover:text-[var(--green-800)] shadow-sm cursor-pointer"
+              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-[#174d35] px-5 py-2.5 text-xs font-bold text-white shadow-md transition-all hover:bg-[#0b241b] hover:scale-105 active:scale-95"
             >
-              <Search size={14} className="text-[var(--green-700)]" />
-              <span className="hidden 2xl:inline text-[11px] text-slate-400">Search projects...</span>
+              <Navigation size={14} className="text-lime-400" />
+              <span>Book Free Cab Visit</span>
             </button>
 
-            {/* Request a Quote Button */}
             <button
-              type="button"
-              onClick={() => setIsQuoteModalOpen(true)}
-              className="rounded-full bg-[var(--green-700)] px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[var(--green-900)] cursor-pointer"
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="rounded-lg border border-slate-200 p-2 text-slate-700 lg:hidden hover:bg-slate-50"
+              aria-label="Toggle navigation menu"
             >
-              Request a Quote
-            </button>
-          </div>
-
-          <div className="flex items-center gap-2 xl:hidden">
-            {/* Mobile Search Button */}
-            <button
-              type="button"
-              onClick={() => setIsQuoteModalOpen(true)}
-              aria-label="Open Request a Quote modal"
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50"
-            >
-              <Search size={18} className="text-[var(--green-700)]" />
-            </button>
-
-            <button aria-label="Open menu" onClick={() => setMenuOpen(!menuOpen)} className="rounded-lg border border-slate-200 p-2">
-              {menuOpen ? <X size={21} /> : <Menu size={21} />}
+              {menuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
 
+        {/* Mobile Nav Drawer */}
         {menuOpen && (
-          <div className="border-t border-slate-200 bg-white px-5 py-5 xl:hidden shadow-lg">
-            <div className="grid gap-2">
-              {mainNavLinks.map((item) => (
-                <a
+          <div className="border-t border-slate-200 bg-white px-5 py-4 lg:hidden shadow-lg animate-in slide-in-from-top-2">
+            <div className="flex flex-col gap-3">
+              {mainNavLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  key={item.label}
-                  href={item.href}
-                  className={`flex items-center justify-between py-2.5 text-[16px] transition border-b ${
-                    item.active
-                      ? "font-extrabold text-[var(--green-950)] border-[#8dbb16]"
-                      : "font-semibold text-slate-700 border-slate-100 hover:text-[var(--green-800)]"
+                  className={`py-2 text-base font-bold border-b border-slate-100 ${
+                    link.active ? "text-[#174d35]" : "text-slate-700"
                   }`}
                 >
-                  <span>{item.label}</span>
-                  {item.active && (
-                    <span className="rounded-full bg-lime-100 px-2.5 py-0.5 text-[11px] font-bold text-[var(--green-800)]">
-                      Current
-                    </span>
-                  )}
-                </a>
+                  {link.label}
+                </Link>
               ))}
-              <div className="mt-2 flex flex-col gap-2.5 border-t border-slate-100 pt-3">
+              <div className="pt-2 flex flex-col gap-2">
                 <button
-                  type="button"
                   onClick={() => {
                     setMenuOpen(false);
                     setIsQuoteModalOpen(true);
                   }}
-                  className="flex items-center justify-center gap-2 rounded-full bg-[var(--green-800)] py-2.5 text-xs font-bold text-white shadow-sm"
+                  className="flex items-center justify-center gap-2 rounded-full bg-[#174d35] py-3 text-xs font-bold text-white shadow-sm"
                 >
-                  <Search size={14} />
-                  <span>Request a Quote</span>
+                  <Navigation size={14} className="text-lime-400" />
+                  <span>Book Free Cab Site Visit</span>
                 </button>
-                <a href="tel:+919052867067" className="flex items-center gap-2 text-xs font-bold text-slate-800 pt-1">
-                  <Phone size={14} className="text-[var(--green-700)]" />
-                  <span>(+91) 9052867067</span>
+                <a
+                  href="tel:+919052867067"
+                  className="flex items-center justify-center gap-2 rounded-full border border-slate-300 py-2.5 text-xs font-bold text-slate-800"
+                >
+                  <Phone size={14} className="text-[#174d35]" />
+                  <span>Call: (+91) 9052867067</span>
                 </a>
               </div>
             </div>
@@ -603,13 +653,17 @@ export default function HomePage() {
         )}
       </header>
 
-      {/* Hero Banner Slider (Slide 1: Banner 1, Slide 2: Banner 2, Slide 3: Local Amenities Video) */}
-      <section id="home" className="relative min-h-[380px] sm:min-h-[480px] md:min-h-[580px] lg:min-h-[660px] text-white flex items-center overflow-hidden border-b border-slate-200 bg-slate-950">
-        {/* Animated Official Stamp Seal (VUDA & VMRDA Approved, 20+ Years) */}
-        <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-10 md:right-12 md:left-auto z-20 pointer-events-none">
+      {/* Hero Banner Section with Embedded Lead Generation Card */}
+      <section
+        id="home"
+        className="relative min-h-[560px] lg:min-h-[640px] text-white flex items-center overflow-hidden border-b border-slate-200 bg-slate-950"
+      >
+        {/* Stamp Badge */}
+        <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 z-20 pointer-events-none">
           <OfficialStampBadge />
         </div>
-        {/* Slides Cross-Fade Container */}
+
+        {/* Background Slider / Video Container */}
         {heroSlides.map((slide, idx) => (
           <div
             key={slide.label}
@@ -623,7 +677,7 @@ export default function HomePage() {
                 alt={slide.alt}
                 fill
                 priority={idx === 0}
-                quality={100}
+                quality={95}
                 unoptimized
                 className="object-cover object-center"
                 sizes="100vw"
@@ -642,131 +696,219 @@ export default function HomePage() {
                 />
               </div>
             )}
-            {/* Cinematic subtle darkening overlay across each slide */}
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/60" />
           </div>
         ))}
 
-        {/* Left-side Gradient Overlay: Smooth fade covering up to content end (hidden on mobile for pure clean banner) */}
-        <div
-          aria-hidden="true"
-          className="hidden md:block pointer-events-none absolute inset-y-0 left-0 z-[1] w-full md:w-[75%] lg:w-[62%] xl:w-[54%] bg-gradient-to-r from-black/95 via-black/80 to-transparent"
-        />
+        {/* Hero Content: 2-Column High-Converting Grid */}
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
+            {/* Left Column: Headline & Value Proposition */}
+            <div className="lg:col-span-7 pt-12 md:pt-0">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-lime-400/40 bg-[#0b241b]/90 px-3.5 py-1 text-xs font-extrabold tracking-wider text-lime-300 shadow-md">
+                <ShieldCheck size={14} className="text-lime-400" />
+                <span>VMRDA &amp; VUDA APPROVED TOWNSHIPS</span>
+              </div>
 
-        {/* Main Banner Text Overlay (Hidden on Mobile as requested, only pure banner visible on mobile) */}
-        <div className="hidden md:block relative z-10 mx-auto w-full max-w-[1400px] px-6 py-20 lg:px-10">
-          <div className="max-w-[720px]">
-            {/* Top Badges */}
-            <div className="mb-4 flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0b241b] border border-lime-400/50 px-3.5 py-1 text-xs font-black tracking-wider text-lime-300 shadow-md">
-                <ShieldCheck size={14} className="text-lime-300" />
-                VUDA & VMRDA APPROVED
-              </span>
-              <span className="inline-flex items-center rounded-full bg-[#0b241b] border border-white/30 px-3.5 py-1 text-xs font-bold text-white shadow-md">
-                20+ YEARS OF ON-TIME DEVELOPMENT
-              </span>
+              <h1 className="display-font text-3xl font-black sm:text-5xl lg:text-[3.25rem] leading-[1.08] text-white [text-shadow:_0_2px_12px_rgba(0,0,0,0.85)]">
+                Leading Real Estate
+                <br />
+                <span className="text-lime-300 [text-shadow:_0_2px_12px_rgba(0,0,0,0.85)]">
+                  Company in Vizag
+                </span>
+              </h1>
+
+              <p className="mt-4 max-w-xl text-sm sm:text-base leading-relaxed text-slate-200 font-medium">
+                Over 20 years of trusted legacy delivering clear-title, legally approved residential
+                plotted layouts across Visakhapatnam's high-growth corridors — Bhogapuram Airport
+                Corridor, Anandapuram, Tagarapuvalasa, and Sontyam.
+              </p>
+
+              {/* 3 Quick Badges */}
+              <div className="mt-6 flex flex-wrap items-center gap-2.5 text-xs font-bold text-white">
+                <span className="inline-flex items-center gap-1.5 rounded-lg bg-black/60 backdrop-blur-md px-3 py-1.5 border border-white/15">
+                  <BadgeCheck size={14} className="text-lime-400" />
+                  Immediate Spot Registration
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-lg bg-black/60 backdrop-blur-md px-3 py-1.5 border border-white/15">
+                  <BadgeCheck size={14} className="text-lime-400" />
+                  100% Vaastu Compliant
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-lg bg-black/60 backdrop-blur-md px-3 py-1.5 border border-white/15">
+                  <BadgeCheck size={14} className="text-lime-400" />
+                  Up to 75% Bank Loan Approved
+                </span>
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3.5">
+                <a
+                  href="#ventures"
+                  className="inline-flex items-center gap-2 rounded-full bg-lime-400 px-6 py-3.5 text-xs sm:text-sm font-black text-slate-950 shadow-xl transition-all hover:bg-lime-300 hover:scale-105 active:scale-95"
+                >
+                  <span>Explore Plotted Ventures</span>
+                  <ArrowRight size={16} />
+                </a>
+                <a
+                  href="tel:+919052867067"
+                  className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/30 px-5 py-3.5 text-xs sm:text-sm font-bold text-white shadow-lg transition-all hover:bg-white/20"
+                >
+                  <Phone size={15} className="text-lime-300" />
+                  <span>Call Property Expert</span>
+                </a>
+              </div>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="display-font text-3xl font-black sm:text-5xl lg:text-[3.5rem] leading-[1.08] text-white [text-shadow:_0_2px_12px_rgba(0,0,0,0.85)]">
-              Leading Real Estate
-              <br />
-              <span className="text-lime-300 [text-shadow:_0_2px_12px_rgba(0,0,0,0.85)]">Company in Vizag</span>
-            </h1>
+            {/* Right Column: High-Converting "Request a Quote & Cab Visit" Form (matching subhagruha.net) */}
+            <div className="lg:col-span-5">
+              <div className="relative overflow-hidden rounded-3xl border border-lime-400/30 bg-slate-950/85 p-6 sm:p-7 shadow-[0_16px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl">
+                <div className="mb-4">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-widest text-lime-400">
+                    <Sparkles size={12} />
+                    Complimentary Service
+                  </span>
+                  <h3 className="display-font text-xl sm:text-2xl font-bold text-white mt-1">
+                    Book Free Cab &amp; Site Visit
+                  </h3>
+                  <p className="text-xs text-slate-300 mt-1">
+                    Doorstep AC cab pickup for your family with guided inspection of prime ventures.
+                  </p>
+                </div>
 
-            {/* Subtitle / Value Proposition */}
-            <p className="mt-5 max-w-xl text-sm sm:text-base leading-7 text-white font-medium [text-shadow:_0_1px_6px_rgba(0,0,0,0.9)]">
-              Over 20 years of on-time development and excellence in delivering premium, clear-title residential plots in prime growth corridors of Visakhapatnam.
-            </p>
+                {leadSuccess ? (
+                  <div className="rounded-2xl bg-emerald-950/80 border border-emerald-500/50 p-6 text-center animate-in fade-in">
+                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-slate-950 shadow-md">
+                      <Check size={24} className="stroke-[3]" />
+                    </div>
+                    <h4 className="mt-3 text-base font-bold text-white">Visit Request Sent!</h4>
+                    <p className="mt-1 text-xs text-emerald-200">
+                      Our coordinator has received your request on WhatsApp and will call to confirm
+                      pickup time and location.
+                    </p>
+                    <button
+                      onClick={() => setLeadSuccess(false)}
+                      className="mt-4 text-xs font-bold text-lime-300 underline"
+                    >
+                      Book another inspection
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleHeroLeadSubmit} className="space-y-3.5">
+                    <div>
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-1">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={leadName}
+                        onChange={(e) => setLeadName(e.target.value)}
+                        placeholder="Enter your name"
+                        className="w-full rounded-xl border border-white/20 bg-white/10 px-3.5 py-2.5 text-xs text-white placeholder-slate-400 focus:border-lime-400 focus:outline-none focus:ring-1 focus:ring-lime-400"
+                      />
+                    </div>
 
-            {/* CTAs */}
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href="#plots"
-                className="inline-flex items-center gap-2 rounded-full bg-lime-400 px-6 py-3.5 text-xs sm:text-sm font-extrabold text-[var(--green-950)] shadow-lg transition-all hover:bg-lime-300 hover:scale-105 active:scale-95"
-              >
-                <span>Explore Plots</span>
-                <ArrowRight size={16} />
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0b241b] border border-white/40 px-6 py-3.5 text-xs sm:text-sm font-bold text-white shadow-lg transition-all hover:bg-[#123b2a]"
-              >
-                <span>Schedule a Site Visit</span>
-              </Link>
+                    <div>
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-1">
+                        Mobile Number
+                      </label>
+                      <input
+                        type="tel"
+                        required
+                        value={leadPhone}
+                        onChange={(e) => setLeadPhone(e.target.value)}
+                        placeholder="+91 98765 43210"
+                        className="w-full rounded-xl border border-white/20 bg-white/10 px-3.5 py-2.5 text-xs text-white placeholder-slate-400 focus:border-lime-400 focus:outline-none focus:ring-1 focus:ring-lime-400"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-1">
+                        Select Growth Corridor / Project
+                      </label>
+                      <select
+                        value={leadProject}
+                        onChange={(e) => setLeadProject(e.target.value)}
+                        className="w-full rounded-xl border border-white/20 bg-slate-900 px-3.5 py-2.5 text-xs text-white focus:border-lime-400 focus:outline-none focus:ring-1 focus:ring-lime-400"
+                      >
+                        <option value="Sukrithi Saanvi (Bhogapuram Airport)">
+                          Bhogapuram Airport Corridor — Sukrithi Saanvi
+                        </option>
+                        <option value="Sukrithi Lohitha (Anandapuram)">
+                          Anandapuram Highway — Sukrithi Lohitha
+                        </option>
+                        <option value="Sukrithi Windsor (Bheemannadorapalem)">
+                          Bheemannadorapalem — Sukrithi Windsor
+                        </option>
+                        <option value="Maple Meadows (Modavalasa)">
+                          Modavalasa — Maple Meadows
+                        </option>
+                        <option value="Sukriti Sampath (Sontyam)">
+                          Sontyam Corridor — Sukriti Sampath
+                        </option>
+                        <option value="Tagarapuvalasa Corridor">
+                          Tagarapuvalasa Coastal Layouts
+                        </option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-1">
+                        Preferred Visit Day
+                      </label>
+                      <select
+                        value={leadDay}
+                        onChange={(e) => setLeadDay(e.target.value)}
+                        className="w-full rounded-xl border border-white/20 bg-slate-900 px-3.5 py-2.5 text-xs text-white focus:border-lime-400 focus:outline-none focus:ring-1 focus:ring-lime-400"
+                      >
+                        <option value="Today">Today (Immediate Visit)</option>
+                        <option value="This Weekend (Free Cab)">This Weekend (Saturday / Sunday)</option>
+                        <option value="Tomorrow">Tomorrow</option>
+                        <option value="Next Week">Next Week</option>
+                      </select>
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmittingLead}
+                      className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-lime-400 py-3 text-xs font-black uppercase tracking-wider text-slate-950 shadow-lg transition-all hover:bg-lime-300 active:scale-95 disabled:opacity-50"
+                    >
+                      <WhatsAppIcon className="h-4 w-4 fill-slate-950" />
+                      <span>Book Free Cab on WhatsApp</span>
+                    </button>
+
+                    <p className="text-center text-[10px] text-slate-400">
+                      🔒 No spam. Our Visakhapatnam team responds within 15 minutes.
+                    </p>
+                  </form>
+                )}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Slide Indicators & Video Controls Bar */}
-        <div className="absolute bottom-6 right-6 z-20 flex flex-wrap items-center gap-2.5">
-          {/* 3-Slide Selector Buttons */}
-          <div className="flex items-center gap-1.5 rounded-full bg-black/75 backdrop-blur-md p-1.5 border border-white/20 shadow-xl">
+        {/* Slide Selector & Controls */}
+        <div className="absolute bottom-4 right-4 z-20 flex items-center gap-2">
+          <div className="flex items-center gap-1.5 rounded-full bg-black/75 backdrop-blur-md p-1 border border-white/20">
             {heroSlides.map((slide, idx) => (
               <button
                 key={slide.label}
                 type="button"
                 onClick={() => setCurrentSlide(idx)}
-                aria-label={`Switch to ${slide.label}`}
-                className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold transition-all cursor-pointer ${
+                className={`rounded-full px-2.5 py-1 text-[11px] font-bold transition-all ${
                   idx === currentSlide
-                    ? "bg-lime-400 text-slate-900 shadow-md scale-102"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    ? "bg-lime-400 text-slate-950"
+                    : "text-white/80 hover:text-white"
                 }`}
               >
-                {slide.type === "video" && (
-                  <Play size={10} className={`fill-current ${idx === currentSlide ? "text-slate-900" : "text-lime-300"}`} />
-                )}
-                <span>{slide.label}</span>
+                {slide.label}
               </button>
             ))}
           </div>
-
-          {/* Video Audio & Playback Controls (shown when on video slide) */}
-          {currentSlide === 2 && (
-            <div className="flex items-center gap-1.5 animate-in fade-in duration-300">
-              <button
-                type="button"
-                onClick={toggleVideoPlayback}
-                aria-label={isVideoPlaying ? "Pause Video" : "Play Video"}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-black/75 text-white backdrop-blur-md border border-white/20 transition hover:bg-black hover:scale-105 active:scale-95 shadow-lg cursor-pointer"
-              >
-                {isVideoPlaying ? <Pause size={14} /> : <Play size={14} className="ml-0.5" />}
-              </button>
-
-              <button
-                type="button"
-                onClick={toggleVideoMute}
-                aria-label={isVideoMuted ? "Unmute Video" : "Mute Video"}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-black/75 text-white backdrop-blur-md border border-white/20 transition hover:bg-black hover:scale-105 active:scale-95 shadow-lg cursor-pointer"
-              >
-                {isVideoMuted ? <VolumeX size={14} /> : <Volume2 size={14} className="text-lime-300" />}
-              </button>
-            </div>
-          )}
         </div>
-
-        {/* Previous and Next Navigation Arrows */}
-        <button
-          type="button"
-          onClick={() => setCurrentSlide((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1))}
-          aria-label="Previous Slide"
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex h-11 w-11 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md border border-white/20 transition hover:bg-black/80 hover:scale-105 active:scale-95 cursor-pointer shadow-lg"
-        >
-          <ChevronLeft size={22} />
-        </button>
-        <button
-          type="button"
-          onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
-          aria-label="Next Slide"
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex h-11 w-11 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md border border-white/20 transition hover:bg-black/80 hover:scale-105 active:scale-95 cursor-pointer shadow-lg"
-        >
-          <ChevronRight size={22} />
-        </button>
       </section>
 
-      {/* Key Company Statistics / Achievements Bar */}
-      <section className="relative z-20 -mt-8 sm:-mt-12 mx-auto max-w-[1360px] px-5 sm:px-8 lg:px-10">
+      {/* Key Company Statistics Bar */}
+      <section className="relative z-20 -mt-6 sm:-mt-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 rounded-3xl bg-white p-5 sm:p-7 shadow-[0_16px_50px_rgba(11,36,27,0.1)] border border-slate-100">
           {companyStats.map((stat, idx) => {
             const Icon = stat.icon;
@@ -779,14 +921,17 @@ export default function HomePage() {
                   idx < 3 ? "lg:border-r border-slate-100" : "lg:border-r-0"
                 }`}
               >
-                <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-lime-100/90 text-[var(--green-800)] shadow-sm">
-                  <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-[var(--green-700)]" />
+                <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-lime-100/90 text-[#174d35] shadow-xs">
+                  <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-[#174d35]" />
                 </div>
                 <div>
-                  <div className="display-font text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-[var(--green-950)]">
-                    {stat.num}<span className="text-[#8dbb16]">{stat.suffix}</span>
+                  <div className="display-font text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-[#0b241b]">
+                    {stat.num}
+                    <span className="text-[#8dbb16]">{stat.suffix}</span>
                   </div>
-                  <p className="text-xs sm:text-sm font-bold text-slate-700 mt-0.5 leading-snug">{stat.label}</p>
+                  <p className="text-xs sm:text-sm font-bold text-slate-700 mt-0.5 leading-snug">
+                    {stat.label}
+                  </p>
                 </div>
               </div>
             );
@@ -794,224 +939,182 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About */}
-      <section id="about-us" className="blueprint relative overflow-hidden bg-white py-[50px]">
-        <div className="relative z-10 mx-auto grid max-w-[1260px] gap-14 px-6 lg:grid-cols-[1fr_480px] lg:items-center lg:px-10">
-          <div>
-            <span className="mb-3.5 inline-flex items-center rounded-full border border-[var(--green-700)]/30 bg-[var(--green-700)]/5 px-3.5 py-1 text-xs font-extrabold tracking-[.2em] text-[var(--green-700)]">
-              ABOUT US
+      {/* SECTION: Our Real Estate Plotted Services (Replacing Construction Contractor copy) */}
+      <section id="services" className="py-20 bg-slate-50 border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#1f6843]/30 bg-[#1f6843]/10 px-3.5 py-1 text-xs font-extrabold tracking-widest text-[#174d35] uppercase">
+              What We Offer
             </span>
-            <h2 className="display-font max-w-xl text-3xl font-black sm:text-4xl lg:text-[2.5rem] leading-[1.08] text-[var(--green-950)]">
-              Building More Than
-              <br />
-              <span className="text-[#8dbb16]">Just Homes</span>
+            <h2 className="display-font mt-3 text-3xl font-black sm:text-4xl lg:text-[2.65rem] text-[#0b241b] leading-tight">
+              Comprehensive <span className="text-[#8dbb16]">Real Estate Services</span>
             </h2>
-            <p className="mt-7 max-w-2xl text-[15px] leading-7 text-slate-600">
-              VizagPlots brings residential land and construction support together under one trusted journey. We focus on helping customers make clear property decisions, plan confidently and build with dependable quality.
+            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+              We specialize in delivering legally approved, high-appreciation residential plotted
+              communities with transparent documentation and complete buyer support at every step.
             </p>
-
-            <div className="mt-10 grid grid-cols-2 gap-7 border-y border-slate-200 py-7 md:grid-cols-4">
-              {[
-                ["Quality Focus", "Dependable workmanship and attention to detail."],
-                ["Customer First", "Your goals guide every important decision."],
-                ["Transparent Process", "Clear communication without unnecessary surprises."],
-                ["Trusted Experience", "A reliable team supporting your journey."],
-              ].map(([title, text]) => (
-                <div key={title}>
-                  <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-lime-100 text-[var(--green-700)]"><CircleCheck size={18} /></div>
-                  <h3 className="text-xs font-extrabold text-slate-800">{title}</h3>
-                  <p className="mt-1 text-[11px] leading-5 text-slate-500">{text}</p>
-                </div>
-              ))}
-            </div>
-
-            <a href="#contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--green-800)] px-5 py-3 text-xs font-bold text-white hover:bg-[var(--green-950)]">
-              Read More About Us <ArrowRight size={15} />
-            </a>
           </div>
 
-          <div className="relative h-[520px] overflow-hidden rounded-2xl border border-slate-100 shadow-md">
-            <Image
-              src="/about-us.png"
-              alt="VizagPlots - Modern home and plots overlooking Visakhapatnam coastline"
-              fill
-              className="object-cover transition-transform duration-700 hover:scale-105"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-[var(--green-950)]/90 p-6 text-white backdrop-blur-md border border-white/10 shadow-lg">
-              <p className="text-[10px] font-bold tracking-[.22em] text-lime-300">OUR VISION</p>
-              <p className="display-font mt-2 text-2xl sm:text-3xl leading-snug">A better path from plot to home.</p>
-            </div>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {realEstateServices.map((srv) => {
+              const Icon = srv.icon;
+              return (
+                <div
+                  key={srv.title}
+                  className="group relative flex flex-col justify-between rounded-3xl bg-white p-7 shadow-xs border border-slate-200 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#174d35]/30"
+                >
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-emerald-50 text-[#174d35] transition-colors group-hover:bg-[#174d35] group-hover:text-white">
+                        <Icon size={26} className="stroke-[2.2]" />
+                      </div>
+                      <span className="rounded-full bg-lime-100 px-3 py-1 text-[11px] font-extrabold text-[#174d35]">
+                        {srv.tag}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-5 text-lg font-bold text-slate-900 group-hover:text-[#174d35] transition-colors">
+                      {srv.title}
+                    </h3>
+                    <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600">
+                      {srv.desc}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#174d35]">
+                    <span>Learn More</span>
+                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Plots */}
-      <section id="plots" className="bg-white py-[50px]">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+      {/* SECTION: Corridor-Based Filterable Project Catalog ("Samples" Overhauled) */}
+      <section id="ventures" className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <div className="mb-2.5 flex items-center gap-2">
-                <span className="inline-block h-[2px] w-6 bg-[#214b28]" />
-                <span className="text-xs font-bold uppercase tracking-wider text-[#214b28]">FEATURED PLOTS</span>
+                <span className="inline-block h-[2px] w-6 bg-[#174d35]" />
+                <span className="text-xs font-extrabold uppercase tracking-wider text-[#174d35]">
+                  PREMIUM RESIDENTIAL PLOTS
+                </span>
               </div>
-              <h2 className="display-font text-3xl font-black tracking-tight text-slate-900 sm:text-4xl lg:text-[2.5rem] leading-tight">
-                Premium <span className="text-[#8dbb16]">Residential Plots</span>
+              <h2 className="display-font text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-[2.65rem] leading-tight">
+                Quality Plotted <span className="text-[#8dbb16]">Communities in Vizag</span>
               </h2>
-              <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-[15px]">
-                Invest in prime locations with excellent connectivity, modern infrastructure and high growth potential.
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-[15px]">
+                Explore legally approved layouts strategically located across Visakhapatnam's fastest
+                growing highway, airport, and IT development corridors.
               </p>
             </div>
-            <a href="#contact" className="inline-flex items-center gap-1.5 self-start pb-1 text-sm font-semibold text-[#214b28] transition-colors hover:text-[#16381e] sm:self-end">
-              View All Plots <ArrowRight size={16} />
-            </a>
+
+            <button
+              onClick={() => setIsQuoteModalOpen(true)}
+              className="inline-flex items-center gap-2 rounded-full border border-[#174d35] px-5 py-2.5 text-xs font-bold text-[#174d35] hover:bg-[#174d35] hover:text-white transition-all self-start md:self-end"
+            >
+              <Download size={14} />
+              <span>Download Master Plans PDF</span>
+            </button>
           </div>
 
-          <div className="mt-6 sm:mt-7 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {plots.map((plot) => (
-              <article
-                key={plot.title}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)]"
+          {/* Corridor Filter Tabs */}
+          <div className="mt-8 flex flex-wrap gap-2 border-b border-slate-200 pb-4">
+            {[
+              { id: "All", label: "All Ventures" },
+              { id: "Bhogapuram", label: "Bhogapuram (Airport Corridor)" },
+              { id: "Anandapuram", label: "Anandapuram (Highway Hub)" },
+              { id: "Tagarapuvalasa", label: "Tagarapuvalasa (Coastal)" },
+              { id: "Modavalasa", label: "Modavalasa & Sontyam" },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setSelectedCorridor(tab.id)}
+                className={`rounded-full px-4 py-2 text-xs font-bold transition-all cursor-pointer ${
+                  selectedCorridor === tab.id
+                    ? "bg-[#174d35] text-white shadow-md"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                }`}
               >
-                <div className="relative h-40 w-full overflow-hidden bg-slate-100 sm:h-44">
-                  <img
-                    src={plot.image}
-                    alt={plot.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute right-3 top-3 rounded-full bg-[#214b28] px-3 py-0.5 text-[11px] font-semibold text-white shadow-sm">
-                    {plot.badge}
-                  </span>
-                </div>
-                <div className="flex flex-1 flex-col justify-between p-4">
-                  <div>
-                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#214b28]">
-                      <MapPin size={13} className="shrink-0 fill-[#214b28] text-[#214b28]" />
-                      <span>{plot.location}</span>
-                    </div>
-                    <h3 className="mt-1 text-base font-bold tracking-tight text-slate-900">{plot.title}</h3>
-                    <div className="mt-2 flex items-center gap-2 text-xs font-semibold text-slate-700">
-                      <LandPlot size={14} className="text-[#214b28]" />
-                      <span>{plot.size}</span>
-                    </div>
-                    <div className="mt-2.5 flex min-h-[46px] flex-wrap content-start items-start gap-1.5">
-                      {plot.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-md bg-slate-100/90 px-2 py-0.5 text-[10.5px] font-medium text-slate-600"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="mt-3 grid grid-cols-2 gap-2">
-                    <Link
-                      href={`/projects/${plot.slug}`}
-                      className="flex items-center justify-center rounded-lg bg-[#214b28] px-2.5 sm:px-3 py-2 text-center text-[11px] font-semibold tracking-tight text-white shadow-sm transition-colors hover:bg-[#16381e] whitespace-nowrap xl:text-xs"
-                    >
-                      View Details
-                    </Link>
-                    <a
-                      href={`https://wa.me/919052867067?text=${encodeURIComponent(
-                        "Hi, I am interested in " + plot.title + " at " + plot.location + ". Please share pricing and layout availability."
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-1.5 rounded-lg border border-[#214b28] bg-white px-2 sm:px-2.5 py-2 text-center text-[11px] font-semibold tracking-tight text-[#214b28] transition-colors hover:bg-[#214b28]/5 whitespace-nowrap xl:text-xs"
-                    >
-                      <WhatsAppIcon className="h-3.5 w-3.5 shrink-0 fill-[#214b28]" />
-                      <span className="whitespace-nowrap">WhatsApp Enquiry</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
+                {tab.label}
+              </button>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* New Ventures */}
-      <section id="new-ventures" className="bg-white py-[50px]">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
-              <span className="mb-3 inline-flex items-center rounded-full border border-[var(--green-700)]/30 bg-[var(--green-700)]/5 px-3.5 py-1 text-xs font-extrabold tracking-[.2em] text-[var(--green-700)]">
-                UPCOMING PROJECTS
-              </span>
-              <h2 className="display-font mt-2 text-3xl font-black sm:text-4xl lg:text-[2.5rem] leading-tight text-[var(--green-950)]">
-                New & Upcoming <span className="text-[#8dbb16]">Ventures</span>
-              </h2>
-              <p className="mt-2 max-w-xl text-sm leading-6 text-slate-500">
-                Thoughtfully planned communities in growing corridors of Visakhapatnam, featuring modern infrastructure and clear approvals.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-6 sm:mt-7 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {upcomingVentures.map((venture) => (
+          {/* Project Cards Grid */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            {filteredVentures.map((v) => (
               <article
-                key={venture.name}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--green-700)]/40 hover:shadow-[0_12px_32px_rgba(18,59,42,0.12)]"
+                key={v.name}
+                className="group flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-lime-500/50"
               >
-                {/* Venture Image with badges */}
-                <div className="relative h-[210px] sm:h-[220px] w-full overflow-hidden bg-slate-100">
+                {/* Image and Badges */}
+                <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                   <img
-                    src={venture.image}
-                    alt={venture.name}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    src={v.image}
+                    alt={`${v.name} plotted layout in Visakhapatnam`}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
 
                   {/* Top Badges */}
-                  <div className="absolute left-3.5 top-3.5">
-                    <span className="rounded-full bg-emerald-700/90 backdrop-blur-sm px-3 py-1 text-[11px] font-bold text-white shadow-sm">
-                      Upcoming Venture
+                  <div className="absolute left-3.5 top-3.5 flex flex-wrap gap-1.5">
+                    <span className="rounded-full bg-emerald-800/95 backdrop-blur-md px-3 py-1 text-[11px] font-bold text-white shadow-xs">
+                      {v.approval}
+                    </span>
+                    <span className="rounded-full bg-black/60 backdrop-blur-md px-2.5 py-1 text-[10px] font-semibold text-lime-300">
+                      {v.corridorLabel}
                     </span>
                   </div>
 
                   <div className="absolute right-3.5 top-3.5">
-                    <span className="rounded-full bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[11px] font-bold text-[var(--green-950)] shadow-sm flex items-center gap-1">
-                      <Compass size={12} className="text-[var(--green-700)]" />
-                      {venture.facing}
+                    <span className="rounded-full bg-lime-400 text-slate-950 font-black px-2.5 py-0.5 text-[10px] shadow-sm">
+                      {v.status}
                     </span>
                   </div>
 
-                  {/* Venture Title Overlay */}
-                  <div className="absolute bottom-3 left-3.5 right-3.5">
-                    <h3 className="display-font text-xl font-bold text-white drop-shadow-sm">
-                      {venture.name}
+                  {/* Title Overlay */}
+                  <div className="absolute bottom-3 left-4 right-4">
+                    <h3 className="display-font text-xl font-bold text-white drop-shadow-sm line-clamp-1">
+                      {v.name}
                     </h3>
                   </div>
                 </div>
 
-                {/* Venture Details */}
-                <div className="flex flex-1 flex-col justify-between p-4 sm:p-5">
+                {/* Body Details */}
+                <div className="flex flex-1 flex-col justify-between p-5">
                   <div>
                     {/* Location */}
-                    <div className="flex items-start gap-1.5 text-xs font-semibold text-slate-600">
-                      <MapPin size={14} className="mt-0.5 shrink-0 text-[var(--green-700)]" />
-                      <span className="line-clamp-1">{venture.location}</span>
+                    <div className="flex items-start gap-1.5 text-xs font-semibold text-slate-700">
+                      <MapPin size={14} className="mt-0.5 shrink-0 text-[#174d35]" />
+                      <span className="line-clamp-1">{v.location}</span>
                     </div>
 
-                    {/* Specifications */}
-                    <div className="mt-3.5 grid grid-cols-2 gap-2 border-y border-slate-100 py-3 text-xs">
-                      <div className="flex items-center gap-1.5 font-semibold text-slate-800">
-                        <Ruler size={13} className="text-[var(--green-700)] shrink-0" />
-                        <span>{venture.size}</span>
+                    {/* Plot Specifications Grid */}
+                    <div className="mt-3.5 grid grid-cols-2 gap-2 rounded-2xl bg-slate-50 p-3 text-xs border border-slate-100">
+                      <div>
+                        <span className="text-[10px] uppercase font-bold text-slate-400 block">
+                          Plot Sizes
+                        </span>
+                        <span className="font-bold text-slate-900 mt-0.5 block">{v.size}</span>
                       </div>
-                      <div className="flex items-center gap-1.5 font-semibold text-slate-800">
-                        <Compass size={13} className="text-[var(--green-700)] shrink-0" />
-                        <span>{venture.facing}</span>
+                      <div>
+                        <span className="text-[10px] uppercase font-bold text-slate-400 block">
+                          Facing Options
+                        </span>
+                        <span className="font-bold text-slate-900 mt-0.5 block">{v.facing}</span>
                       </div>
                     </div>
 
-                    {/* Highlights */}
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      {venture.highlights.map((tag) => (
+                    {/* Amenity Tags */}
+                    <div className="mt-3.5 flex flex-wrap gap-1.5">
+                      {v.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-md bg-emerald-50/90 px-2 py-0.5 text-[10.5px] font-medium text-emerald-800 border border-emerald-100"
+                          className="rounded-md bg-emerald-50 px-2 py-0.5 text-[11px] font-medium text-[#174d35] border border-emerald-100/60"
                         >
                           {tag}
                         </span>
@@ -1019,25 +1122,37 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* Action Buttons: KNOW DETAILS and WhatsApp Enquiry */}
-                  <div className="mt-4 grid grid-cols-2 gap-2 pt-3 border-t border-slate-100">
-                    <Link
-                      href={`/projects/${venture.slug}`}
-                      className="flex items-center justify-center gap-1.5 rounded-lg bg-[#214b28] px-2 sm:px-3 py-2 text-center text-[11px] font-bold tracking-tight text-white shadow-sm transition-colors hover:bg-[#16381e] whitespace-nowrap xl:text-xs"
-                    >
-                      <span>KNOW DETAILS</span>
-                      <ArrowRight size={13} />
-                    </Link>
+                  {/* 3 Action Buttons: View Details, Download Brochure, WhatsApp Enquiry */}
+                  <div className="mt-5 pt-4 border-t border-slate-100 flex flex-col gap-2">
+                    <div className="grid grid-cols-2 gap-2">
+                      <Link
+                        href={`/projects/${v.slug}`}
+                        className="flex items-center justify-center gap-1 rounded-xl bg-[#174d35] px-3 py-2.5 text-center text-xs font-bold text-white shadow-sm hover:bg-[#0b241b] transition-colors"
+                      >
+                        <span>View Details</span>
+                        <ArrowRight size={13} />
+                      </Link>
+
+                      <button
+                        type="button"
+                        onClick={() => setIsQuoteModalOpen(true)}
+                        className="flex items-center justify-center gap-1 rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-center text-xs font-bold text-slate-800 hover:bg-slate-50 transition-colors"
+                      >
+                        <Download size={13} className="text-[#174d35]" />
+                        <span>Brochure</span>
+                      </button>
+                    </div>
+
                     <a
                       href={`https://wa.me/919052867067?text=${encodeURIComponent(
-                        `Hi, I am interested in upcoming venture "${venture.name}" at ${venture.location}.`
+                        `Hi Subhagruha, I am interested in layout "${v.name}" at ${v.location}. Please share Master Plan and price list.`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-1.5 rounded-lg border border-[#214b28] bg-white px-2 sm:px-2.5 py-2 text-center text-[11px] font-semibold tracking-tight text-[#214b28] transition-colors hover:bg-[#214b28]/5 whitespace-nowrap xl:text-xs"
+                      className="flex items-center justify-center gap-1.5 rounded-xl border border-emerald-600 bg-emerald-50/70 px-3 py-2 text-center text-xs font-bold text-emerald-900 hover:bg-emerald-100 transition-colors"
                     >
-                      <WhatsAppIcon className="h-3.5 w-3.5 shrink-0 fill-[#214b28]" />
-                      <span className="whitespace-nowrap">WhatsApp Enquiry</span>
+                      <WhatsAppIcon className="h-3.5 w-3.5 fill-[#25D366]" />
+                      <span>WhatsApp Price List &amp; LP Map</span>
                     </a>
                   </div>
                 </div>
@@ -1047,250 +1162,175 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How we work */}
-      <section id="how-we-work" className="relative overflow-hidden bg-gradient-to-r from-[#0b2416] via-[#143e22] to-[#0d2817] py-[50px] text-white shadow-inner">
-        {/* Atmospheric background glows */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(163,230,53,0.1),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(23,77,53,0.4),transparent_60%)]" />
-        
-        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-10">
-            {/* Left Column: Heading and CTA */}
-            <div className="lg:w-[27%] shrink-0">
-              <span className="text-[11px] font-extrabold tracking-[0.22em] text-emerald-300 uppercase">
-                OUR PROCESS
-              </span>
-              <h2 className="display-font mt-1.5 text-3xl font-black sm:text-4xl lg:text-[2.5rem] leading-[1.1] text-white">
-                How We <span className="text-[#a6d51d]">Work</span>
-              </h2>
-              <p className="mt-3 text-xs sm:text-[13px] leading-5 text-emerald-100/80">
-                From finding the right plot to handing over your dream home, we support you at every step.
-              </p>
-              <div className="mt-5 sm:mt-6">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#9ec828] px-5 py-2.5 text-xs font-black text-[#0c2914] shadow-md transition-all hover:bg-[#ade22f] hover:shadow-lg hover:scale-105 active:scale-95"
+      {/* SECTION: Customer Journey (How We Work - Plotted Real Estate Flow) */}
+      <section
+        id="how-we-work"
+        className="relative overflow-hidden bg-gradient-to-r from-[#0b2416] via-[#143e22] to-[#0d2817] py-20 text-white shadow-inner"
+      >
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="text-xs font-extrabold tracking-widest text-lime-300 uppercase">
+              TRANSPARENT JOURNEY
+            </span>
+            <h2 className="display-font mt-2 text-3xl font-black sm:text-4xl lg:text-[2.65rem] text-white">
+              How We Work: <span className="text-lime-300">From Visit to Spot Registration</span>
+            </h2>
+            <p className="mt-3 text-xs sm:text-sm text-emerald-100/80 leading-relaxed">
+              Our 5-step transparent process ensures complete peace of mind, verified legal titles,
+              and seamless ownership handover.
+            </p>
+          </div>
+
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {processSteps.map((step, idx) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={step.title}
+                  className="relative flex flex-col items-center text-center rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-md transition-all hover:bg-white/10 hover:border-lime-400/40"
                 >
-                  <span>Our Process</span>
-                  <ArrowRight size={14} className="stroke-[2.5]" />
-                </a>
-              </div>
-            </div>
+                  <span className="absolute -top-3.5 rounded-full bg-lime-400 text-slate-950 font-black px-2.5 py-0.5 text-xs shadow-md">
+                    {step.num}
+                  </span>
+                  <div className="mt-2 flex h-14 w-14 items-center justify-center rounded-full bg-white text-[#174d35] shadow-lg">
+                    <Icon size={24} className="stroke-[2.2]" />
+                  </div>
+                  <h3 className="mt-4 text-sm font-bold text-white tracking-tight">{step.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-emerald-100/75">{step.desc}</p>
+                </div>
+              );
+            })}
+          </div>
 
-            {/* Right Column: 6 Steps with Animated Flowing Arrows */}
-            <div className="lg:w-[73%] overflow-x-auto hide-scrollbar pb-3 lg:pb-0">
-              <div className="flex items-start justify-between min-w-[700px] lg:min-w-0 w-full">
-                {processSteps.map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.title} className="flex items-start flex-1 min-w-0">
-                      <div className="flex flex-col items-center text-center w-full px-1">
-                        {/* Circular icon with dark green ring border */}
-                        <div className="flex h-14 w-14 sm:h-[58px] sm:w-[58px] items-center justify-center rounded-full bg-white border-[3.5px] border-[#2d6136] text-[#144723] shadow-[0_4px_16px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:scale-110">
-                          <Icon size={24} className="stroke-[2.2]" />
-                        </div>
-                        {/* Step title */}
-                        <h3 className="mt-3 text-xs sm:text-[13px] font-bold text-white tracking-tight whitespace-nowrap">
-                          {item.title}
-                        </h3>
-                        {/* Step description */}
-                        <p className="mt-1 max-w-[105px] text-[11px] leading-tight text-emerald-100/75">
-                          {item.desc}
-                        </p>
-                      </div>
-
-                      {/* Animated connecting arrow, vertically centered with circle */}
-                      {index < processSteps.length - 1 && (
-                        <div className="flex h-14 sm:h-[58px] items-center justify-center px-0.5 sm:px-1 shrink-0">
-                          <svg
-                            className="w-4 h-4 sm:w-5 sm:h-5 text-lime-400 animate-arrow-flow"
-                            style={{ animationDelay: `${index * 0.22}s` }}
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2.4"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <line x1="3" y1="12" x2="21" y2="12" />
-                            <polyline points="14 5 21 12 14 19" />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setIsQuoteModalOpen(true)}
+              className="inline-flex items-center gap-2 rounded-full bg-lime-400 px-7 py-3.5 text-xs sm:text-sm font-black text-slate-950 shadow-xl transition-all hover:bg-lime-300 hover:scale-105 active:scale-95"
+            >
+              <span>Schedule Your Free Site Visit Now</span>
+              <ArrowRight size={16} />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Recent projects */}
-      <section id="projects" className="bg-[var(--soft)] py-[50px]">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
-          <span className="mb-3 inline-flex items-center rounded-full border border-[var(--green-700)]/30 bg-[var(--green-700)]/5 px-3.5 py-1 text-xs font-extrabold tracking-[.2em] text-[var(--green-700)]">
-            OUR LATEST WORK
-          </span>
-          <h2 className="display-font mt-2 text-3xl font-black sm:text-4xl lg:text-[2.5rem] leading-tight text-[var(--green-950)]">
-            Recent <span className="text-[#8dbb16]">Projects</span>
-          </h2>
-          <p className="mt-2 max-w-xl text-sm leading-6 text-slate-500">A glimpse of our latest construction projects, built with quality attention to detail.</p>
-          <div className="mt-6 sm:mt-7 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {recentProjects.map((project) => (
-              <ProjectCard key={project.name + project.location} project={project} />
+      {/* SECTION: Pre-Approved Banking Partners (NEW SECTION) */}
+      <section className="py-16 bg-white border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-[#174d35]">
+              <CreditCard size={14} className="text-[#174d35]" />
+              FINANCIAL TIE-UPS
+            </span>
+            <h2 className="display-font mt-2 text-2xl sm:text-3xl font-bold text-slate-950">
+              Pre-Approved Loans by Leading Banks
+            </h2>
+            <p className="mt-1.5 text-xs sm:text-sm text-slate-600">
+              Enjoy hassle-free financing up to 75% of your plot investment with minimal documentation.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {bankingPartners.map((bank) => (
+              <div
+                key={bank.name}
+                className="flex flex-col items-center justify-center rounded-2xl bg-slate-50 border border-slate-200/90 p-5 text-center transition-all hover:border-[#174d35] hover:bg-white hover:shadow-md"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-xs border border-slate-200 text-[#174d35] font-black text-sm">
+                  {bank.name.split(" ")[0]}
+                </div>
+                <h4 className="mt-3 text-xs font-bold text-slate-900">{bank.name}</h4>
+                <span className="mt-1 rounded-full bg-emerald-100 text-[#174d35] text-[10px] font-extrabold px-2 py-0.5">
+                  {bank.rate}
+                </span>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why choose us */}
-      <section id="why-choose-us" className="bg-white py-[50px]">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
-            {/* Left Column: Video Showcase */}
+      {/* SECTION: About Subhagruha Group & Leadership */}
+      <section id="about-us" className="py-20 bg-slate-50 border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left: Founder Image and 20+ Years Legacy Badge */}
             <div className="lg:col-span-5">
-              <div className="relative overflow-hidden rounded-3xl border border-slate-200/90 bg-slate-950 shadow-2xl">
-                {showVideo ? (
-                  <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full">
-                    <iframe
-                      src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?autoplay=1&mute=0&rel=0"
-                      title="VizagPlots Property Walkthrough Video"
-                      className="h-full w-full border-0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowVideo(false)}
-                      aria-label="Close video"
-                      className="absolute right-3.5 top-3.5 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/75 text-white backdrop-blur transition-all hover:bg-black hover:scale-105 active:scale-95 shadow-md"
-                    >
-                      <X size={16} />
-                    </button>
+              <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
+                <div className="relative h-[420px] sm:h-[480px] w-full">
+                  <Image
+                    src="/subhagruha/founder.png"
+                    alt="Subhagruha Leadership - Real Estate Developer in Visakhapatnam"
+                    fill
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <span className="text-xs font-extrabold tracking-widest text-lime-400 uppercase">
+                      LEADERSHIP VISION
+                    </span>
+                    <h4 className="display-font text-xl font-bold mt-1">
+                      Mr. Namburu Kalyan Chakravarthy
+                    </h4>
+                    <p className="text-xs text-slate-300">
+                      Chairman &amp; Managing Director — Subhagruha Group
+                    </p>
                   </div>
-                ) : (
-                  <div
-                    className="group relative aspect-[16/10] sm:aspect-[4/3] w-full cursor-pointer overflow-hidden"
-                    onClick={() => setShowVideo(true)}
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85"
-                      alt="Property walkthrough video preview"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20" />
-
-                    {/* Top Badges */}
-                    <div className="absolute left-4 top-4 flex items-center gap-2">
-                      <span className="flex items-center gap-2 rounded-full bg-emerald-600/95 backdrop-blur-sm px-3.5 py-1 text-xs font-bold text-white shadow-lg">
-                        <span className="relative flex h-2 w-2">
-                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
-                          <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
-                        </span>
-                        <span>PROPERTY WALKTHROUGH</span>
-                      </span>
-                    </div>
-
-                    <div className="absolute right-4 top-4">
-                      <span className="rounded-full bg-black/60 backdrop-blur-sm px-2.5 py-0.5 text-[11px] font-semibold text-white/90">
-                        HD 1080p
-                      </span>
-                    </div>
-
-                    {/* Pulsing Play Button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="relative flex items-center justify-center">
-                        <div className="absolute -inset-4 rounded-full bg-lime-400/30 animate-ping opacity-60" />
-                        <div className="absolute -inset-2 rounded-full bg-lime-400/40 blur-sm" />
-                        <button
-                          type="button"
-                          aria-label="Play video walkthrough"
-                          className="relative flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-lime-400 text-[var(--green-950)] shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:bg-lime-300 group-active:scale-95"
-                        >
-                          <Play size={28} className="ml-1 fill-current stroke-current" />
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Bottom glassmorphic overlay */}
-                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-2xl bg-white/95 backdrop-blur-md p-3.5 sm:p-4 shadow-xl border border-white/40">
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--green-950)] text-lime-400 font-black text-sm shadow">
-                          20+
-                        </div>
-                        <div>
-                          <p className="text-xs font-bold text-[var(--green-950)]">Years of Trusted Excellence</p>
-                          <p className="text-[11px] text-slate-500">12,000+ Happy Families & Homes</p>
-                        </div>
-                      </div>
-                      <span className="hidden sm:inline-flex items-center gap-1 text-xs font-bold text-[var(--green-800)]">
-                        Play Video →
-                      </span>
-                    </div>
-                  </div>
-                )}
+                </div>
               </div>
             </div>
 
-            {/* Right Column: Content */}
-            <div className="flex flex-col justify-center lg:col-span-7">
-              <span className="mb-3 inline-flex items-center rounded-full border border-[var(--green-700)]/30 bg-[var(--green-700)]/5 px-3.5 py-1 text-xs font-extrabold tracking-[.2em] text-[var(--green-700)] w-fit">
-                THE VIZAGPLOTS DIFFERENCE
+            {/* Right: Company Story & Trust Points */}
+            <div className="lg:col-span-7">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#1f6843]/30 bg-[#1f6843]/10 px-3.5 py-1 text-xs font-extrabold tracking-widest text-[#174d35] uppercase">
+                ABOUT SUBHAGRUHA GROUP
               </span>
-              <h2 className="display-font text-3xl font-black sm:text-4xl lg:text-[2.5rem] leading-tight text-[var(--green-950)]">
-                Why Choose <span className="text-[#8dbb16]">Us</span>
+              <h2 className="display-font mt-3 text-3xl font-black sm:text-4xl lg:text-[2.65rem] text-[#0b241b] leading-tight">
+                Two Decades of Building <span className="text-[#8dbb16]">Trust in Visakhapatnam</span>
               </h2>
-              <p className="mt-2.5 text-sm leading-6 text-slate-600">
-                Over 20 years of trusted presence in Visakhapatnam, offering clear-title plotted developments with comprehensive customer support.
+              <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">
+                Subhagruha is a trusted and reputed real estate development brand across Andhra
+                Pradesh and Telangana. With over 20 years of experience, Subhagruha has successfully
+                delivered 100+ legally approved plotted townships, serving over 12,000 satisfied
+                families and investors.
+              </p>
+              <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-600">
+                Every layout is developed with wide internal blacktop roads, underground infrastructure,
+                green parks, and avenue plantations — positioned strategically along Visakhapatnam's
+                prime growth axes including Bhogapuram International Airport and Anandapuram Highway.
               </p>
 
-              {/* 6 Feature Items */}
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                {whyChooseItems.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div
-                      key={item.num}
-                      className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-[var(--soft)] p-4 transition-all duration-300 hover:border-[var(--green-700)]/40 hover:bg-white hover:shadow-md"
-                    >
-                      <div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-[11px] font-black tracking-wider text-[var(--green-800)] bg-lime-100/90 px-2 py-0.5 rounded-md border border-lime-300/60 font-mono">
-                            {item.num}
-                          </span>
-                          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[var(--green-800)] text-white shadow-sm transition-transform duration-300 group-hover:scale-110">
-                            <Icon size={14} />
-                          </div>
-                        </div>
-                        <h3 className="mt-2.5 text-sm font-bold text-[var(--green-950)] leading-snug">
-                          {item.title}
-                        </h3>
-                        <p className="mt-1 text-xs leading-relaxed text-slate-500">
-                          {item.desc}
-                        </p>
-                      </div>
+              {/* 4 Core Pillars */}
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                {[
+                  ["VMRDA & VUDA Sanctioned", "Legally compliant layouts with complete transparency."],
+                  ["Clear 30-Year Titles", "Verified land records with spot registration."],
+                  ["100% Vaastu Compliance", "Harmonious layout planning with prime East & North facings."],
+                  ["Complete Buyer Support", "End-to-end guidance from site visit to registration."],
+                ].map(([title, desc]) => (
+                  <div key={title} className="rounded-2xl bg-white p-4 border border-slate-200">
+                    <div className="flex items-center gap-2">
+                      <CircleCheck size={16} className="text-[#174d35]" />
+                      <h4 className="text-xs font-bold text-slate-900">{title}</h4>
                     </div>
-                  );
-                })}
+                    <p className="mt-1 text-[11px] leading-relaxed text-slate-500">{desc}</p>
+                  </div>
+                ))}
               </div>
 
-              {/* Bottom CTA Row */}
-              <div className="mt-7 flex flex-wrap items-center gap-4">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--green-800)] px-6 py-3 text-xs font-bold text-white shadow-md transition-all hover:bg-[var(--green-950)] hover:scale-105 active:scale-95"
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/about-us"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#174d35] px-6 py-3 text-xs font-bold text-white hover:bg-[#0b241b] transition-all"
                 >
-                  <span>Schedule a Free Site Visit</span>
-                  <ArrowRight size={15} />
-                </a>
+                  <span>Know More About Subhagruha</span>
+                  <ArrowRight size={14} />
+                </Link>
                 <a
-                  href="https://wa.me/919052867067?text=Hi%2C%20I%20would%20like%20to%20chat%20with%20an%20expert%20about%20VizagPlots."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-3 text-xs font-bold text-[var(--green-950)] shadow-sm transition-all hover:bg-slate-50"
+                  href="tel:+919052867067"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-3 text-xs font-bold text-slate-800 hover:bg-slate-50 transition-all"
                 >
-                  <WhatsAppIcon className="h-4 w-4 fill-[#25D366]" />
-                  <span>Chat with an Expert</span>
+                  <Phone size={14} className="text-[#174d35]" />
+                  <span>Call: (+91) 9052867067</span>
                 </a>
               </div>
             </div>
@@ -1298,55 +1338,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="bg-[var(--soft)] py-[60px]">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
+      {/* SECTION: Customer Testimonials from subhagruha.net */}
+      <section className="py-20 bg-white border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
-            <span className="mb-3 inline-flex items-center rounded-full border border-[var(--green-700)]/30 bg-[var(--green-700)]/5 px-3.5 py-1 text-xs font-extrabold tracking-[.2em] text-[var(--green-700)]">
-              WHAT OUR CLIENTS SAY
+            <span className="text-xs font-extrabold tracking-widest text-[#174d35] uppercase">
+              VERIFIED BUYERS
             </span>
-            <h2 className="display-font mt-2 text-3xl font-black sm:text-4xl lg:text-[2.5rem] leading-tight text-[var(--green-950)]">
-              Customer <span className="text-[#8dbb16]">Testimonials</span>
+            <h2 className="display-font mt-2 text-3xl font-black sm:text-4xl text-slate-950">
+              What Our Plot Owners Say
             </h2>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
-              Real feedback from customers who invested in Subhagruha plotted ventures in Visakhapatnam and Vizianagaram.
+            <p className="mt-2 text-sm text-slate-600">
+              Real feedback from families and investors who bought residential plots in our Vizag ventures.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((item) => (
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
               <div
-                key={item.name}
-                className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:border-[var(--green-700)]/30"
+                key={t.name}
+                className="flex flex-col justify-between rounded-3xl bg-slate-50 p-6 sm:p-7 border border-slate-200 shadow-xs"
               >
                 <div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-amber-400">
-                      {[...Array(item.rating)].map((_, i) => (
-                        <Star key={i} size={15} className="fill-amber-400 text-amber-400" />
-                      ))}
-                    </div>
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-lime-100 text-[var(--green-800)]">
-                      <Quote size={13} className="fill-current opacity-70" />
-                    </div>
+                  <div className="flex items-center gap-1 text-amber-500 mb-4">
+                    {[...Array(t.rating)].map((_, i) => (
+                      <Star key={i} size={15} className="fill-amber-400 text-amber-400" />
+                    ))}
                   </div>
-
-                  <p className="mt-4 text-sm leading-relaxed text-slate-700 font-medium">
-                    &ldquo;{item.review}&rdquo;
+                  <p className="text-xs sm:text-sm leading-relaxed text-slate-700 italic">
+                    "{t.review}"
                   </p>
                 </div>
 
-                <div className="mt-6 flex items-center gap-3.5 border-t border-slate-100 pt-5">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[var(--green-900)] to-[var(--green-700)] text-lime-300 font-black text-sm shadow">
-                    {item.initials}
-                  </div>
+                <div className="mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
                   <div>
-                    <h4 className="text-sm font-bold text-[var(--green-950)]">{item.name}</h4>
-                    <p className="text-xs font-semibold text-slate-500">{item.role}</p>
-                    <span className="inline-block mt-0.5 text-[10px] font-bold text-[var(--green-700)] bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                      {item.venture}
-                    </span>
+                    <h4 className="text-xs font-bold text-slate-900">{t.name}</h4>
+                    <p className="text-[11px] text-slate-500">{t.role}</p>
                   </div>
+                  <span className="rounded-full bg-emerald-100 text-[#174d35] text-[10px] font-bold px-2.5 py-1">
+                    {t.venture}
+                  </span>
                 </div>
               </div>
             ))}
@@ -1354,241 +1385,264 @@ export default function HomePage() {
         </div>
       </section>
 
-
-      {/* Contact */}
-      <section id="contact" className="bg-white py-[60px]">
-        <div className="mx-auto grid max-w-[1260px] gap-12 px-6 lg:grid-cols-[.85fr_1.15fr] lg:px-10">
-          <div>
-            <span className="inline-flex items-center rounded-full border border-[var(--green-700)]/30 bg-[var(--green-700)]/5 px-3 py-1 text-xs font-extrabold tracking-[.25em] text-[var(--green-700)]">
-              GET IN TOUCH
+      {/* SECTION: Real Estate FAQ Accordion (NEW SECTION) */}
+      <section id="faq" className="py-20 bg-slate-50 border-b border-slate-200">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <span className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-[#174d35]">
+              <HelpCircle size={14} className="text-[#174d35]" />
+              FREQUENTLY ASKED QUESTIONS
             </span>
-            <h2 className="display-font mt-3 text-4xl sm:text-5xl text-[var(--green-950)] lg:text-6xl">
-              Contact <span className="text-[#8dbb16]">Us</span>
+            <h2 className="display-font mt-2 text-3xl font-black sm:text-4xl text-slate-950">
+              Everything You Need to Know
             </h2>
-            <p className="mt-4 max-w-md text-sm leading-7 text-slate-500">
-              We&apos;re here to help you find your plot, plan your home and move forward with confidence. Visit our office or reach out anytime.
+            <p className="mt-2 text-sm text-slate-600">
+              Clear answers regarding VMRDA approvals, bank loans, site visits, and registration.
             </p>
-            <div className="mt-8 grid gap-4">
-              <ContactItem
-                icon={Phone}
-                label="Phone Number"
-                value="(+91) 9052867067"
-                href="tel:+919052867067"
-              />
-              <ContactItem
-                icon={MessageCircle}
-                label="WhatsApp"
-                value="(+91) 9052867067"
-                href="https://wa.me/919052867067?text=Hi%20VizagPlots%2C%20I%20am%20interested%20in%20plots%20in%20Visakhapatnam."
-              />
-              <ContactItem
-                icon={Mail}
-                label="Email Address"
-                value="janishaik9@gmail.com"
-                href="mailto:janishaik9@gmail.com"
-              />
-              <ContactItem
-                icon={MapPin}
-                label="Office Address"
-                value="50-50-33/2, J R Plaza, Gurudwara Junction, Visakhapatnam, Andhra Pradesh 530013"
-                href="https://www.google.com/maps/search/?api=1&query=50-50-33%2F2%2C+J+R+Plaza%2C+Gurudwara+Junction%2C+Visakhapatnam%2C+Andhra+Pradesh+530013"
-              />
-            </div>
           </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            <form className="rounded-2xl border border-slate-200 bg-white p-6 md:col-span-1 shadow-sm">
-              <h3 className="display-font text-2xl text-[var(--green-950)]">Start a Conversation</h3>
-              <p className="mt-1 text-xs text-slate-500">Drop us a message and our team will get in touch shortly.</p>
-              <div className="mt-5 grid gap-3">
-                <input className="rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none focus:border-[var(--green-700)] focus:ring-1 focus:ring-[var(--green-700)]" placeholder="Your Name" />
-                <input className="rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none focus:border-[var(--green-700)] focus:ring-1 focus:ring-[var(--green-700)]" placeholder="Phone Number" />
-                <input className="rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none focus:border-[var(--green-700)] focus:ring-1 focus:ring-[var(--green-700)]" placeholder="Email Address" />
-                <textarea className="min-h-24 rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none focus:border-[var(--green-700)] focus:ring-1 focus:ring-[var(--green-700)]" placeholder="How can we help?" />
-                <button type="button" className="rounded-full bg-[var(--green-800)] px-5 py-3 text-xs font-extrabold text-white transition hover:bg-[var(--green-950)]">
-                  Send Enquiry →
-                </button>
-              </div>
-            </form>
 
-            {/* Interactive Location Map */}
-            <div className="flex flex-col min-h-[380px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-              <div className="relative flex-1 w-full min-h-[290px]">
-                <iframe
-                  title="VizagPlots Office Location - J R Plaza, Gurudwara Junction"
-                  src="https://maps.google.com/maps?q=50-50-33%2F2%2C+J+R+Plaza%2C+Gurudwara+Junction%2C+Visakhapatnam%2C+Andhra+Pradesh+530013&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                  className="absolute inset-0 h-full w-full border-0"
-                  loading="lazy"
-                  allowFullScreen
+          <div className="mt-10 space-y-3">
+            {faqs.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div
+                  key={faq.q}
+                  className="overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-xs transition-colors"
+                >
+                  <button
+                    onClick={() => setOpenFaq(isOpen ? null : idx)}
+                    className="flex w-full items-center justify-between p-5 text-left text-sm font-bold text-slate-900 hover:text-[#174d35] transition-colors cursor-pointer"
+                  >
+                    <span>{faq.q}</span>
+                    <ChevronDown
+                      size={18}
+                      className={`text-[#174d35] transition-transform duration-300 shrink-0 ml-4 ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <div className="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3 animate-in fade-in duration-200">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Strong Call to Action Banner */}
+      <section className="relative overflow-hidden bg-[#0b241b] py-20 text-white">
+        <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-lime-400/40 bg-lime-400/10 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-lime-300">
+            SECURE YOUR INVESTMENT TODAY
+          </span>
+          <h2 className="display-font mt-4 text-3xl font-black sm:text-5xl lg:text-[3.25rem] leading-tight">
+            Planning to Invest in <span className="text-lime-300">Visakhapatnam Plots?</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base leading-relaxed text-slate-300">
+            Book a complimentary door-to-door AC cab site visit with our team, verify approved VMRDA
+            LP layout drawings, and select prime East/North facing plots before prices appreciate.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <button
+              onClick={() => setIsQuoteModalOpen(true)}
+              className="inline-flex items-center gap-2 rounded-full bg-lime-400 px-7 py-4 text-xs sm:text-sm font-black text-slate-950 shadow-xl transition-all hover:bg-lime-300 hover:scale-105 active:scale-95"
+            >
+              <Navigation size={16} />
+              <span>Book Free Cab Site Visit</span>
+            </button>
+            <a
+              href="https://wa.me/919052867067?text=Hi%2C%20I%20want%20to%20consult%20regarding%20Subhagruha%20plots%20in%20Vizag."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-4 text-xs sm:text-sm font-bold text-white shadow-lg transition-all hover:bg-white/20"
+            >
+              <WhatsAppIcon className="h-4 w-4 fill-[#25D366]" />
+              <span>Chat with Advisor</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact & Location Section */}
+      <section id="contact" className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Contact Info */}
+            <div className="lg:col-span-5">
+              <span className="text-xs font-extrabold tracking-widest text-[#174d35] uppercase">
+                GET IN TOUCH
+              </span>
+              <h2 className="display-font mt-2 text-3xl font-black text-slate-950 sm:text-4xl">
+                Visit Our Visakhapatnam Office
+              </h2>
+              <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                Connect with our authorized property consultants for brochure copies, master layout
+                plans, and transparent price quotations.
+              </p>
+
+              <div className="mt-8 space-y-5">
+                <ContactItem
+                  icon={Phone}
+                  label="Direct Call Support"
+                  value="(+91) 9052867067 / (+91) 7989097790"
+                  href="tel:+919052867067"
+                />
+                <ContactItem
+                  icon={WhatsAppIcon}
+                  label="WhatsApp Helpline"
+                  value="Chat Directly on WhatsApp"
+                  href="https://wa.me/919052867067?text=Hi%2C%20I%20want%20to%20inquire%20about%20plots%20in%20Vizag."
+                />
+                <ContactItem
+                  icon={Mail}
+                  label="Email Inquiries"
+                  value="janishaik9@gmail.com"
+                  href="mailto:janishaik9@gmail.com"
+                />
+                <ContactItem
+                  icon={MapPin}
+                  label="Office Address"
+                  value="50-50-33/2, J R Plaza, Gurudwara Junction, Visakhapatnam, Andhra Pradesh 530013"
+                  href="https://maps.google.com/?q=Gurudwara+Junction+Visakhapatnam"
                 />
               </div>
-              <div className="bg-slate-50 p-4 border-t border-slate-200">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <div className="flex items-center gap-1.5 text-[var(--green-800)]">
-                      <MapPin size={15} className="shrink-0" />
-                      <p className="text-xs font-extrabold text-[var(--green-950)]">VizagPlots Office</p>
-                    </div>
-                    <p className="mt-1 text-[11px] leading-relaxed text-slate-500">
-                      50-50-33/2, J R Plaza, Gurudwara Junction, Visakhapatnam - 530013
-                    </p>
-                  </div>
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=50-50-33%2F2%2C+J+R+Plaza%2C+Gurudwara+Junction%2C+Visakhapatnam%2C+Andhra+Pradesh+530013"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 inline-flex items-center gap-1 rounded-full bg-[var(--green-700)] px-3 py-1.5 text-[11px] font-bold text-white shadow-sm transition hover:bg-[var(--green-900)] whitespace-nowrap"
-                  >
-                    <span>View Map</span>
-                    <ArrowRight size={11} />
-                  </a>
-                </div>
+            </div>
+
+            {/* Right: Embedded Interactive Google Map */}
+            <div className="lg:col-span-7">
+              <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-lg">
+                <iframe
+                  title="Subhagruha Visakhapatnam Office Location"
+                  src="https://maps.google.com/maps?q=50-50-33%2F2%2C+J+R+Plaza%2C+Gurudwara+Junction%2C+Visakhapatnam%2C+Andhra+Pradesh+530013&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  className="h-[380px] sm:h-[450px] w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[var(--green-950)] py-14 text-white">
-        <div className="mx-auto max-w-[1260px] px-6 lg:px-10">
-          <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
+      {/* Main Footer */}
+      <footer className="bg-[#0b241b] text-white pt-16 pb-12 border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {/* Col 1 */}
             <div>
-              <Image src="/logo.png" alt="VizagPlots" width={145} height={78} className="h-16 w-auto rounded bg-white p-1 object-contain" />
-              <p className="mt-5 max-w-sm text-xs leading-6 text-white/55">Residential plots and complete construction support for customers ready to turn land into a place they can call home.</p>
-              <div className="mt-5 flex flex-col gap-2.5 text-xs text-white/70">
-                <a href="tel:+919052867067" className="hover:text-lime-300 transition flex items-center gap-2">
-                  <Phone size={14} className="text-lime-400" />
-                  <span>(+91) 9052867067</span>
-                </a>
-                <a href="mailto:janishaik9@gmail.com" className="hover:text-lime-300 transition flex items-center gap-2">
-                  <Mail size={14} className="text-lime-400" />
-                  <span>janishaik9@gmail.com</span>
-                </a>
-                <p className="text-white/60 text-[11px] leading-relaxed flex items-start gap-2 mt-1">
-                  <MapPin size={14} className="text-lime-400 shrink-0 mt-0.5" />
-                  <span>50-50-33/2, J R Plaza, Gurudwara Junction, Visakhapatnam, AP 530013</span>
-                </p>
+              <div className="relative h-12 w-48 mb-4">
+                <Image src="/logo.png" alt="VizagPlots Logo" fill className="object-contain" />
               </div>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Authorized Marketing Advisory for Subhagruha Group ventures across Visakhapatnam,
+                offering clear-title, legally approved plotted townships in prime growth corridors.
+              </p>
               <div className="mt-5">
                 <FooterSocials />
               </div>
             </div>
+
+            {/* Col 2 */}
             <div>
-              <p className="text-xs font-extrabold uppercase tracking-[.2em] text-lime-300">Quick Links</p>
-              <div className="mt-5 grid gap-3 text-xs text-white/65">
-                <Link href="/" className="hover:text-white transition">Home</Link>
-                <Link href="/about-us" className="hover:text-white transition">About</Link>
-                <Link href="/projects" className="hover:text-white transition">Projects</Link>
-                <Link href="/blog" className="hover:text-white transition">Blog</Link>
-                <Link href="/contact" className="hover:text-white transition">Contact</Link>
-              </div>
+              <h4 className="text-xs font-black uppercase tracking-wider text-lime-400 mb-4">
+                Growth Corridors
+              </h4>
+              <ul className="space-y-2 text-xs text-slate-300">
+                <li>• Bhogapuram (Greenfield Airport Zone)</li>
+                <li>• Anandapuram (Highway Commercial Hub)</li>
+                <li>• Tagarapuvalasa (Coastal Residential Corridor)</li>
+                <li>• Bheemannadorapalem Township Zone</li>
+                <li>• Sontyam &amp; Modavalasa Corridor</li>
+                <li>• Madhurawada &amp; Kapuluppada IT SEZ</li>
+              </ul>
             </div>
+
+            {/* Col 3 */}
             <div>
-              <p className="text-xs font-extrabold uppercase tracking-[.2em] text-lime-300">Connect</p>
-              <div className="mt-5 grid gap-3 text-xs text-white/65">
-                <button
-                  type="button"
-                  onClick={() => setIsQuoteModalOpen(true)}
-                  className="text-left text-lime-300 font-semibold hover:underline cursor-pointer"
-                >
-                  Request a Quote
-                </button>
-                <Link href="/contact" className="hover:text-white transition">Contact Us</Link>
-                <a href="https://wa.me/919052867067" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">WhatsApp: (+91) 9052867067</a>
-                <a href="tel:+919052867067" className="hover:text-white transition">Call: (+91) 9052867067</a>
-              </div>
+              <h4 className="text-xs font-black uppercase tracking-wider text-lime-400 mb-4">
+                Quick Links
+              </h4>
+              <ul className="space-y-2 text-xs text-slate-300">
+                <li>
+                  <Link href="/about-us" className="hover:text-lime-300 transition-colors">
+                    About Subhagruha
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/projects" className="hover:text-lime-300 transition-colors">
+                    All Plotted Ventures
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="hover:text-lime-300 transition-colors">
+                    Real Estate Buyer Guides
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="hover:text-lime-300 transition-colors">
+                    Contact &amp; Site Visit
+                  </Link>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setIsQuoteModalOpen(true)}
+                    className="hover:text-lime-300 transition-colors text-left"
+                  >
+                    Request a Quote
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            {/* Col 4 */}
+            <div>
+              <h4 className="text-xs font-black uppercase tracking-wider text-lime-400 mb-4">
+                Office Location
+              </h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                50-50-33/2, J R Plaza, Gurudwara Junction, Visakhapatnam, Andhra Pradesh 530013
+              </p>
+              <p className="mt-3 text-xs text-slate-300">
+                <strong className="text-white">Phone:</strong> (+91) 9052867067
+              </p>
+              <p className="text-xs text-slate-300 mt-1">
+                <strong className="text-white">Email:</strong> janishaik9@gmail.com
+              </p>
             </div>
           </div>
-          <div className="mt-12 flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-[10px] text-white/40 sm:flex-row">
-            <span>© 2026 VizagPlots. All rights reserved.</span>
-            <span>Privacy Policy · Terms & Conditions</span>
+
+          <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+            <span>© 2026 Subhagruha Projects / VizagPlots. All rights reserved.</span>
+            <span>VMRDA &amp; AP RERA Approved Residential Plotted Townships</span>
           </div>
         </div>
       </footer>
 
-      {/* Floating WhatsApp Quick Action */}
+      {/* Floating WhatsApp Action Button */}
       <a
-        href="https://wa.me/919052867067?text=Hi%20VizagPlots%2C%20I%20am%20interested%20in%20plots%20in%20Visakhapatnam."
+        href="https://wa.me/919052867067?text=Hi%20VizagPlots%2C%20I%20am%20interested%20in%20learning%20more%20about%20Subhagruha%20ventures."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-transform hover:scale-110 active:scale-95 group"
+        className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-transform hover:scale-110 active:scale-95 group"
       >
         <WhatsAppIcon className="h-7 w-7 fill-white" />
         <span className="absolute right-16 top-1/2 -translate-y-1/2 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
           Chat on WhatsApp
         </span>
       </a>
+
+      {/* Enquiry / Brochure Modal */}
+      <EnquiryModal
+        isOpen={isQuoteModalOpen}
+        onClose={() => setIsQuoteModalOpen(false)}
+      />
     </main>
-  );
-}
-
-function Info({ title, text, icon: Icon }: { title: string; text: string; icon: React.ElementType }) {
-  return (
-    <div className="flex gap-3">
-      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-lime-100 text-[var(--green-700)]"><Icon size={15} /></div>
-      <div><h4 className="text-xs font-extrabold text-[var(--green-950)]">{title}</h4><p className="mt-1 text-[11px] leading-5 text-slate-500">{text}</p></div>
-    </div>
-  );
-}
-
-function ProjectCard({
-  project,
-}: {
-  project: {
-    name: string;
-    slug?: string;
-    location: string;
-    type: string;
-    status: string;
-    image: string;
-    link?: string;
-    size?: string;
-    facing?: string;
-  };
-}) {
-  return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)]">
-      <div className="relative h-40 w-full overflow-hidden bg-slate-100 sm:h-44">
-        <img
-          src={project.image}
-          alt={project.name}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <span className="absolute right-3 top-3 rounded-full bg-[#214b28] px-3 py-0.5 text-[11px] font-semibold text-white shadow-sm">
-          {project.status}
-        </span>
-        {project.facing && (
-          <span className="absolute left-3 top-3 rounded-full bg-white/95 backdrop-blur-sm px-2.5 py-0.5 text-[10px] font-semibold text-[#214b28] shadow-sm">
-            {project.facing}
-          </span>
-        )}
-      </div>
-      <div className="flex flex-1 flex-col justify-between p-4">
-        <div>
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-[#214b28]">
-            <MapPin size={13} className="shrink-0 fill-[#214b28] text-[#214b28]" />
-            <span className="line-clamp-1">{project.location}</span>
-          </div>
-          <h3 className="mt-1 text-base font-bold tracking-tight text-slate-900 line-clamp-1">{project.name}</h3>
-          <div className="mt-2 flex items-center">
-            <span className="inline-flex items-center gap-1.5 rounded-md border border-lime-300/80 bg-lime-50/90 px-2.5 py-1 text-[11px] sm:text-xs font-semibold text-[var(--green-950)] shadow-xs">
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#8dbb16]" />
-              <span>{project.size ? `${project.size} · ${project.type}` : project.type}</span>
-            </span>
-          </div>
-        </div>
-        <div className="mt-3 pt-1">
-          <Link
-            href={`/projects/${project.slug || "sukrithi-aawas"}`}
-            className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-[#214b28] px-3 py-2 text-center text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#16381e]"
-          >
-            <span>View Details</span>
-            <ArrowRight size={14} />
-          </Link>
-        </div>
-      </div>
-    </article>
   );
 }
 
@@ -1605,12 +1659,12 @@ function ContactItem({
 }) {
   const content = (
     <div className="flex items-center gap-4 group">
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-lime-100 text-[var(--green-700)] transition-colors group-hover:bg-[var(--green-700)] group-hover:text-white">
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#174d35] transition-colors group-hover:bg-[#174d35] group-hover:text-white">
         <Icon size={18} />
       </div>
       <div>
         <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">{label}</p>
-        <p className="mt-0.5 text-xs sm:text-sm font-semibold text-[var(--green-950)] group-hover:text-[var(--green-700)] transition-colors">
+        <p className="mt-0.5 text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#174d35] transition-colors">
           {value}
         </p>
       </div>
