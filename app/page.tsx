@@ -978,59 +978,91 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION: Our Real Estate Plotted Services (Bento Architecture) */}
-      <section id="services" className="py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200">
+      {/* SECTION 2: About Subhagruha Group & Leadership (Two Decades of Building Trust) */}
+      <section id="about-us" className="py-24 bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#1f6843]/30 bg-[#1f6843]/10 px-4 py-1 text-xs font-black tracking-widest text-[#123e2c] uppercase">
-              PLOTTED TOWNSHIP EXPERTISE
-            </span>
-            <h2 className="display-font mt-3.5 text-3xl font-black sm:text-4xl lg:text-[2.75rem] text-[#071f16] leading-tight">
-              Comprehensive <span className="text-[#8dbb16]">Real Estate Services</span>
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
-              We specialize in delivering legally approved, high-appreciation residential plotted
-              communities with transparent documentation and complete buyer support at every step.
-            </p>
-          </div>
-
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-            {realEstateServices.map((srv) => {
-              const Icon = srv.icon;
-              return (
-                <div
-                  key={srv.title}
-                  className="group relative flex flex-col justify-between rounded-3xl bg-white p-8 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-slate-200/90 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(7,31,22,0.1)] hover:border-lime-400"
-                >
-                  <div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-50 to-lime-50 text-[#123e2c] border border-emerald-100/80 transition-all group-hover:bg-[#123e2c] group-hover:text-white group-hover:border-[#123e2c] shadow-xs">
-                        <Icon size={26} className="stroke-[2.2]" />
-                      </div>
-                      <span className="rounded-full bg-lime-100/80 border border-lime-300/60 px-3 py-1 text-[11px] font-extrabold text-[#071f16]">
-                        {srv.badge}
-                      </span>
-                    </div>
-
-                    <h3 className="mt-6 text-lg font-bold text-slate-900 group-hover:text-[#123e2c] transition-colors leading-snug">
-                      {srv.title}
-                    </h3>
-                    <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
-                      {srv.desc}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left: Founder Image and 20+ Years Legacy Badge */}
+            <div className="lg:col-span-5">
+              <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
+                <div className="relative h-[440px] sm:h-[500px] w-full">
+                  <Image
+                    src="/subhagruha/founder.png"
+                    alt="Subhagruha Leadership - Real Estate Developer in Visakhapatnam"
+                    fill
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <span className="text-xs font-extrabold tracking-widest text-lime-400 uppercase">
+                      LEADERSHIP VISION
+                    </span>
+                    <h4 className="display-font text-2xl font-bold mt-1">
+                      Mr. Namburu Kalyan Chakravarthy
+                    </h4>
+                    <p className="text-xs text-slate-300 font-medium">
+                      Chairman &amp; Managing Director — Subhagruha Group
                     </p>
                   </div>
-
-                  <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#123e2c]">
-                    <span className="font-extrabold uppercase tracking-wider text-[11px] text-[#8dbb16]">
-                      {srv.tag}
-                    </span>
-                    <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      Learn More <ArrowRight size={13} />
-                    </span>
-                  </div>
                 </div>
-              );
-            })}
+              </div>
+            </div>
+
+            {/* Right: Company Story & Trust Points */}
+            <div className="lg:col-span-7">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#1f6843]/30 bg-[#1f6843]/10 px-4 py-1 text-xs font-extrabold tracking-widest text-[#123e2c] uppercase">
+                ABOUT SUBHAGRUHA GROUP
+              </span>
+              <h2 className="display-font mt-3.5 text-3xl font-black sm:text-4xl lg:text-[2.75rem] text-[#071f16] leading-tight">
+                Two Decades of Building <span className="text-[#8dbb16]">Trust in Visakhapatnam</span>
+              </h2>
+              <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+                Subhagruha is a trusted and reputed real estate development brand across Andhra
+                Pradesh and Telangana. With over 20 years of experience, Subhagruha has successfully
+                delivered 100+ legally approved plotted townships, serving over 12,000 satisfied
+                families and investors.
+              </p>
+              <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+                Every layout is developed with wide internal blacktop roads, underground infrastructure,
+                green parks, and avenue plantations — positioned strategically along Visakhapatnam's
+                prime growth axes including Bhogapuram International Airport and Anandapuram Highway.
+              </p>
+
+              {/* 4 Core Pillars */}
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  ["VMRDA & VUDA Sanctioned", "Legally compliant layouts with complete transparency."],
+                  ["Clear 30-Year Titles", "Verified land records with spot registration."],
+                  ["100% Vaastu Compliance", "Harmonious layout planning with prime East & North facings."],
+                  ["Complete Buyer Support", "End-to-end guidance from site visit to registration."],
+                ].map(([title, desc]) => (
+                  <div key={title} className="rounded-2xl bg-white p-4 border border-slate-200/90 shadow-xs">
+                    <div className="flex items-center gap-2">
+                      <CircleCheck size={17} className="text-[#123e2c]" />
+                      <h4 className="text-xs font-bold text-slate-900">{title}</h4>
+                    </div>
+                    <p className="mt-1 text-[11px] leading-relaxed text-slate-500">{desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/about-us"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#123e2c] px-7 py-3.5 text-xs font-bold text-white hover:bg-[#071f16] transition-all shadow-md"
+                >
+                  <span>Know More About Subhagruha</span>
+                  <ArrowRight size={14} />
+                </Link>
+                <a
+                  href="tel:+919052867067"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3.5 text-xs font-bold text-slate-800 hover:bg-slate-50 transition-all shadow-xs"
+                >
+                  <Phone size={14} className="text-[#123e2c]" />
+                  <span>Call: (+91) 9052867067</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1295,91 +1327,59 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION: About Subhagruha Group & Leadership */}
-      <section id="about-us" className="py-24 bg-slate-50 border-b border-slate-200">
+      {/* SECTION 6: Our Real Estate Plotted Services (Comprehensive Real Estate Services) */}
+      <section id="services" className="py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left: Founder Image and 20+ Years Legacy Badge */}
-            <div className="lg:col-span-5">
-              <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
-                <div className="relative h-[440px] sm:h-[500px] w-full">
-                  <Image
-                    src="/subhagruha/founder.png"
-                    alt="Subhagruha Leadership - Real Estate Developer in Visakhapatnam"
-                    fill
-                    className="object-cover object-top"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <span className="text-xs font-extrabold tracking-widest text-lime-400 uppercase">
-                      LEADERSHIP VISION
-                    </span>
-                    <h4 className="display-font text-2xl font-bold mt-1">
-                      Mr. Namburu Kalyan Chakravarthy
-                    </h4>
-                    <p className="text-xs text-slate-300 font-medium">
-                      Chairman &amp; Managing Director — Subhagruha Group
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#1f6843]/30 bg-[#1f6843]/10 px-4 py-1 text-xs font-black tracking-widest text-[#123e2c] uppercase">
+              PLOTTED TOWNSHIP EXPERTISE
+            </span>
+            <h2 className="display-font mt-3.5 text-3xl font-black sm:text-4xl lg:text-[2.75rem] text-[#071f16] leading-tight">
+              Comprehensive <span className="text-[#8dbb16]">Real Estate Services</span>
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+              We specialize in delivering legally approved, high-appreciation residential plotted
+              communities with transparent documentation and complete buyer support at every step.
+            </p>
+          </div>
+
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            {realEstateServices.map((srv) => {
+              const Icon = srv.icon;
+              return (
+                <div
+                  key={srv.title}
+                  className="group relative flex flex-col justify-between rounded-3xl bg-white p-8 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-slate-200/90 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(7,31,22,0.1)] hover:border-lime-400"
+                >
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-50 to-lime-50 text-[#123e2c] border border-emerald-100/80 transition-all group-hover:bg-[#123e2c] group-hover:text-white group-hover:border-[#123e2c] shadow-xs">
+                        <Icon size={26} className="stroke-[2.2]" />
+                      </div>
+                      <span className="rounded-full bg-lime-100/80 border border-lime-300/60 px-3 py-1 text-[11px] font-extrabold text-[#071f16]">
+                        {srv.badge}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-6 text-lg font-bold text-slate-900 group-hover:text-[#123e2c] transition-colors leading-snug">
+                      {srv.title}
+                    </h3>
+                    <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
+                      {srv.desc}
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Right: Company Story & Trust Points */}
-            <div className="lg:col-span-7">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#1f6843]/30 bg-[#1f6843]/10 px-4 py-1 text-xs font-extrabold tracking-widest text-[#123e2c] uppercase">
-                ABOUT SUBHAGRUHA GROUP
-              </span>
-              <h2 className="display-font mt-3.5 text-3xl font-black sm:text-4xl lg:text-[2.75rem] text-[#071f16] leading-tight">
-                Two Decades of Building <span className="text-[#8dbb16]">Trust in Visakhapatnam</span>
-              </h2>
-              <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
-                Subhagruha is a trusted and reputed real estate development brand across Andhra
-                Pradesh and Telangana. With over 20 years of experience, Subhagruha has successfully
-                delivered 100+ legally approved plotted townships, serving over 12,000 satisfied
-                families and investors.
-              </p>
-              <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
-                Every layout is developed with wide internal blacktop roads, underground infrastructure,
-                green parks, and avenue plantations — positioned strategically along Visakhapatnam's
-                prime growth axes including Bhogapuram International Airport and Anandapuram Highway.
-              </p>
-
-              {/* 4 Core Pillars */}
-              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  ["VMRDA & VUDA Sanctioned", "Legally compliant layouts with complete transparency."],
-                  ["Clear 30-Year Titles", "Verified land records with spot registration."],
-                  ["100% Vaastu Compliance", "Harmonious layout planning with prime East & North facings."],
-                  ["Complete Buyer Support", "End-to-end guidance from site visit to registration."],
-                ].map(([title, desc]) => (
-                  <div key={title} className="rounded-2xl bg-white p-4 border border-slate-200/90 shadow-xs">
-                    <div className="flex items-center gap-2">
-                      <CircleCheck size={17} className="text-[#123e2c]" />
-                      <h4 className="text-xs font-bold text-slate-900">{title}</h4>
-                    </div>
-                    <p className="mt-1 text-[11px] leading-relaxed text-slate-500">{desc}</p>
+                  <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#123e2c]">
+                    <span className="font-extrabold uppercase tracking-wider text-[11px] text-[#8dbb16]">
+                      {srv.tag}
+                    </span>
+                    <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      Learn More <ArrowRight size={13} />
+                    </span>
                   </div>
-                ))}
-              </div>
-
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/about-us"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#123e2c] px-7 py-3.5 text-xs font-bold text-white hover:bg-[#071f16] transition-all shadow-md"
-                >
-                  <span>Know More About Subhagruha</span>
-                  <ArrowRight size={14} />
-                </Link>
-                <a
-                  href="tel:+919052867067"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3.5 text-xs font-bold text-slate-800 hover:bg-slate-50 transition-all shadow-xs"
-                >
-                  <Phone size={14} className="text-[#123e2c]" />
-                  <span>Call: (+91) 9052867067</span>
-                </a>
-              </div>
-            </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
